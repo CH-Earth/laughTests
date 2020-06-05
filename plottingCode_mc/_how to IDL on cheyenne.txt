@@ -1,0 +1,15 @@
+module load idl
+
+# from shell
+idl -e "<filename>" 
+
+
+( THIS DOESN't WORK FOR SOME REASON )
+# open IDL command
+idl
+
+# run a pro file
+.run <filename>
+
+# interrupt idl
+CRTL+c (while running) OR CTRL+\ (while in .run mode)
