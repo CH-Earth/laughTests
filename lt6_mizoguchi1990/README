@@ -1,0 +1,6 @@
+
+to convert .ipynb file to .py, run:
+
+      jupyter nbconvert --to python plot_lt_celia1990.ipynb 
+      
+
