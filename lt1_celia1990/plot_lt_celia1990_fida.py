@@ -52,6 +52,7 @@
 from pathlib import Path
 import xarray as xr # note, also needs netcdf4 library installed
 import matplotlib.pyplot as plt
+from matplotlib.legend_handler import HandlerLine2D, HandlerTuple
 
 
 # In[2]:
@@ -115,13 +116,13 @@ plt.rc('font', **font)
 fig = plt.figure(figsize=(18, 10), dpi= 80, facecolor='w', edgecolor='k');
 
 # Plot the data in a single figure
-plt.plot(matricHead_t10[0:100], layerHeight_t10[0:100], marker='.', color='blue')
-plt.plot(matricHead_t32[0:100], layerHeight_t32[0:100], marker='.', color='blue')
-plt.plot(matricHead_t49[0:100], layerHeight_t39[0:100], marker='.', color='blue')
+p1be, = plt.plot(matricHead_t10[0:100], layerHeight_t10[0:100], marker='8', color='blue')
+p2be, = plt.plot(matricHead_t32[0:100], layerHeight_t32[0:100], marker='8', color='blue')
+p3be, = plt.plot(matricHead_t49[0:100], layerHeight_t39[0:100], marker='8', color='blue')
 
-plt.plot(matricHead_fida_t10[0:100], layerHeight_t10[0:100], marker='*', color='red')
-plt.plot(matricHead_fida_t32[0:100], layerHeight_t32[0:100], marker='*', color='red')
-plt.plot(matricHead_fida_t49[0:100], layerHeight_t39[0:100], marker='*', color='red')
+p1fida, = plt.plot(matricHead_fida_t10[0:100], layerHeight_t10[0:100], marker='D', color='red')
+p2fida, = plt.plot(matricHead_fida_t32[0:100], layerHeight_t32[0:100], marker='D', color='red')
+p3fida, = plt.plot(matricHead_fida_t49[0:100], layerHeight_t39[0:100], marker='D', color='red')
 
 # Make sure that increasing depth points downward
 plt.gca().invert_yaxis()
@@ -130,6 +131,11 @@ plt.gca().invert_yaxis()
 plt.xlabel('Pressure head [m]'); # note, ';' supresses output from the Text object that is created for the labels
 plt.ylabel('Depth [m]');
 #plt.legend();
+leg1 = plt.legend([(p1be, p2be, p3be)], ['SUMMA-BE'], numpoints=1,
+               handler_map={tuple: HandlerTuple(ndivide=None)}, frameon=False)
+plt.gca().add_artist(leg1)
+leg2 = plt.legend([(p1fida, p2fida, p3fida)], ['SUMMA-IDA'], numpoints=1,
+               handler_map={tuple: HandlerTuple(ndivide=None)}, loc=9, bbox_to_anchor=(0.09, 0.95), frameon=False)
 
 # Save the figure
 plt.savefig('img/lt1_celia1990_fida.png');

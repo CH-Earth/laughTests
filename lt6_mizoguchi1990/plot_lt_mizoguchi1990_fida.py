@@ -181,19 +181,19 @@ fig.tight_layout()
 
 # First case, t = 720
 ax[0].plot(mLayerVolFracTot_t720[0:idxDepth], layerHeight_t720[0:idxDepth], color='blue', label='SUMMA-BE');
-ax[0].plot(mLayerVolFracTot_fida_t720[0:idxDepth], layerHeight_t720[0:idxDepth], color='red', label='SUMMA-FIDA');
+ax[0].plot(mLayerVolFracTot_fida_t720[0:idxDepth], layerHeight_t720[0:idxDepth], color='red', label='SUMMA-IDA');
 ax[0].plot(ld[:,1], ld[:,0], linestyle='None', marker='o', color='green', label='Observed');
 set_axes_and_text(0,'12 hours')
 
 # Second case, t = 1440
 ax[1].plot(mLayerVolFracTot_t1440[0:idxDepth], layerHeight_t1440[0:idxDepth], color='blue', label='SUMMA-BE');
-ax[1].plot(mLayerVolFracTot_fida_t1440[0:idxDepth], layerHeight_t1440[0:idxDepth], color='red', label='SUMMA-FIDA');
+ax[1].plot(mLayerVolFracTot_fida_t1440[0:idxDepth], layerHeight_t1440[0:idxDepth], color='red', label='SUMMA-IDA');
 ax[1].plot(ld[:,2], ld[:,0], linestyle='None', marker='o', color='green', label='Observed');
 set_axes_and_text(1,'24 hours')
 
 # Third case, t = 3000
 ax[2].plot(mLayerVolFracTot_t3000[0:idxDepth], layerHeight_t3000[0:idxDepth], color='blue', label='SUMMA-BE');
-ax[2].plot(mLayerVolFracTot_fida_t3000[0:idxDepth], layerHeight_t3000[0:idxDepth], color='red', label='SUMMA-FIDA');
+ax[2].plot(mLayerVolFracTot_fida_t3000[0:idxDepth], layerHeight_t3000[0:idxDepth], color='red', label='SUMMA-IDA');
 ax[2].plot(ld[:,3], ld[:,0], linestyle='None', marker='o', color='green', label='Observed');
 set_axes_and_text(2,'50 hours')
 

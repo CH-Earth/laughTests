@@ -4,26 +4,18 @@
 # In[1]:
 
 
-get_ipython().magic('pylab inline')
-import matplotlib as mpl
-import xarray as xr
-
-
-# In[2]:
-
-
 S_PER_HOUR = 3600
 MM_PER_M = 1000
 
 
-# In[3]:
+# In[2]:
 
 
 ds1 = xr.open_dataset('./output/syntheticHillslope-exp1_output_timestep.nc')
 ds2 = xr.open_dataset('./output/syntheticHillslope-exp2_output_timestep.nc')
 
 
-# In[4]:
+# In[3]:
 
 
 def drainable_water(ds):
@@ -31,6 +23,14 @@ def drainable_water(ds):
     return (ds['mLayerDepth'].isel(midToto=soil_slice) 
             * (ds['mLayerVolFracLiq'].isel(midToto=soil_slice) 
                - ds['fieldCapacity'])).sum(dim='midToto')
+
+
+# In[4]:
+
+
+get_ipython().magic('pylab inline')
+import matplotlib as mpl
+import xarray as xr
 
 
 # In[5]:
@@ -70,7 +70,7 @@ def kinematic_storage(surfHydCond, soilDepth, TOPMODEL_exp, porosity, qrain, iti
     return hS
 
 
-# In[24]:
+# In[7]:
 
 
 def kinematic_runoff(surfHydCond, soilDepth, TOPMODEL_exp, porosity, domain_area, hillWidth, hill_dist, qRain):
@@ -100,7 +100,7 @@ def kinematic_runoff(surfHydCond, soilDepth, TOPMODEL_exp, porosity, domain_area
     return qKin, qFall, tExit
 
 
-# In[37]:
+# In[8]:
 
 
 fig = plt.figure(constrained_layout=True, figsize=(14, 9))
