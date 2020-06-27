@@ -65,7 +65,7 @@ sim_sand = "millerSand_output_timestep.nc"
 sim_clay = "millerClay_output_timestep.nc"
 sim_loam = "millerLoam_output_timestep.nc"
 
-sim_sand_fida = "millerSand_output_timestep.nc"
+sim_sand_fida = "millerSand_output_timestep_fida.nc"
 sim_clay_fida = "millerClay_output_timestep_fida.nc"
 sim_loam_fida = "millerLoam_output_timestep_fida.nc"
 
