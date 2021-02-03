@@ -139,3 +139,6 @@ dmypy.json
 # Cython debug symbols
 cython_debug/
 
+# Debug folder
+balance_checks/keep_but_do_not_commit
+*.ipynb
