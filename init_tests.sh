@@ -34,6 +34,6 @@ for DIR in ${TEST_CASE_SETTINGS_DIR}/*; do
     for FILE in `grep -l '<BASEDIR>' -R ${DIR}`; do
         RUN_FILE="$FILE"
         # Create a file to use for testing while preserving the orignal fileManager file
-        sed "s|<BASEDIR>|${BASEDIR}/test_cases|" $FILE > "${RUN_FILE/./"_test."}"
+        sed "s|<BASEDIR>|${BASEDIR}/test_cases|" $FILE > "${RUN_FILE/./_test.}"
     done
 done
