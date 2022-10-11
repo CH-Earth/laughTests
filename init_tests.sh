@@ -26,7 +26,7 @@ mkdir -p test_cases/output/non-actors/wigmosta1999
 cd ..
 SUMMADIR=`pwd`
 export SUMMADIR
-cd Laugh-Tests
+cd laugh_tests
 BASEDIR=`pwd`
 export BASEDIR
 TEST_CASE_SETTINGS_DIR=test_cases/settings/syntheticTestCases
