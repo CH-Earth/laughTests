@@ -5,14 +5,14 @@ tmZoneInfo           'localTime' ! Time zone info
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/wigmosta1999/' !  input_path
 outputPath           '<BASEDIR>/output/non-actors/wigmosta1999/' !  output_path
-decisionsFile        'syntheticTestCases/wigmosta1999/summa_zDecisions.txt' !  decision
+decisionsFile        'syntheticTestCases/wigmosta1999/common/summa_zDecisions.txt' !  decision
 outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
-globalHruParamFile   'syntheticTestCases/wigmosta1999/summa_zLocalParamInfo.txt' !  local_par
-globalGruParamFile   'syntheticTestCases/wigmosta1999/summa_zBasinParamInfo.txt' !  basin_par
-attributeFile        'syntheticTestCases/wigmosta1999/summa_zLocalAttributes.nc' !  local_attr
-trialParamFile       'syntheticTestCases/wigmosta1999/summa_zParamTrial-exp2.nc' !  para_trial
-forcingListFile      'syntheticTestCases/wigmosta1999/summa_zForcingFileList.txt' !  forcing_list
-initConditionFile    'syntheticTestCases/wigmosta1999/summa_zInitialCond.nc' !  initial_cond
+globalHruParamFile   'syntheticTestCases/wigmosta1999/common/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'syntheticTestCases/wigmosta1999/common/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'syntheticTestCases/wigmosta1999/common/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'syntheticTestCases/wigmosta1999/common/summa_zParamTrial-exp2.nc' !  para_trial
+forcingListFile      'syntheticTestCases/wigmosta1999/common/summa_zForcingFileList.txt' !  forcing_list
+initConditionFile    'syntheticTestCases/wigmosta1999/common/summa_zInitialCond.nc' !  initial_cond
 outFilePrefix        'syntheticHillslope-exp2' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !
