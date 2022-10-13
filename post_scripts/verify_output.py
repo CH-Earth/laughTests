@@ -88,92 +88,104 @@ def get_output_vars(model_output_file):
 
 
 num_hru = 1
-actors_output_path = "../test_cases/output/actors"
-non_actors_output_path = "../test_cases/output/non-actors"
+actors_output_path = "/Summa-Actors/laugh_tests/test_cases/output/actors"
+non_actors_output_path = "/SUMMA/laugh_tests/test_cases/output/non-actors"
 verification_dir_path = "../validation_data/m2_mac_Sept23"
 
 
 print("Checking Celia")
-celia_non_actors = "/celia1990/celia1990_G1-1_timestep.nc"
-celia_actors = "/celia1990/celia1990GRU1-1_timestep.nc"
-verified_path = non_actors_output_path + celia_non_actors
-compare_path = actors_output_path + celia_actors
+celia_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/celia1990/celia1990_G1-1_timestep.nc"
+celia_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
+
+model_output_file = "../test_cases/settings/meta/Model_Output.txt"
+
+output_vars = get_output_vars(model_output_file)
+celia_errors = verify_data(celia_non_actors, celia_actors, num_hru, output_vars)
+print()
+
+
+print("Checking Colbeck_1")
+colbeck_1_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/colbeck1976/colbeck1976-exp1_G1-1_timestep.nc"
+colbeck_1_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
+model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
+output_vars = get_output_vars(model_output_file)
+colbeck_1_errors = verify_data(colbeck_1_non_actors, colbeck_1_actors, num_hru, output_vars)
+print()
+
+
+print("Checking Colbeck_2")
+colbeck_2_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/colbeck1976/colbeck1976-exp2_G1-1_timestep.nc"
+colbeck_2_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
+model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
+output_vars = get_output_vars(model_output_file)
+colbeck_2_errors = verify_data(colbeck_2_non_actors, colbeck_2_actors, num_hru, output_vars)
+print()
+
+
+print("Checking Colbeck_3")
+colbeck_3_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/colbeck1976/colbeck1976-exp3_G1-1_timestep.nc"
+colbeck_3_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
+model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
+output_vars = get_output_vars(model_output_file)
+colbeck_3_errors = verify_data(colbeck_3_non_actors, colbeck_3_actors, num_hru, output_vars)
+print()
+
+
+print("Checking Miller_loam")
+miller_loam_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/miller1998/millerLoam_G1-1_timestep.nc"
+miller_loam_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/miller1998/millerLoamGRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
-celia_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Colbeck_1")
-# colbeck_1 = "/colbeck1976/colbeck1976-exp1_G1-1_timestep.nc"
-# verified_path = verification_dir_path + colbeck_1
-# compare_path = data_to_compare_path + colbeck_1
-# model_output_file = "./test_cases/settings/syntheticTestCases/colbeck1976/summa_defineModelOutput.txt"
-# output_vars = get_output_vars(model_output_file)
-# colbeck_1_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Colbeck_2")
-# colbeck_2 = "/colbeck1976/colbeck1976-exp2_G1-1_timestep.nc"
-# verified_path = verification_dir_path + colbeck_2
-# compare_path = data_to_compare_path + colbeck_2
-# model_output_file = "./test_cases/settings/syntheticTestCases/colbeck1976/summa_defineModelOutput.txt"
-# output_vars = get_output_vars(model_output_file)
-# colbeck_2_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Colbeck_3")
-# colbeck_3 = "/colbeck1976/colbeck1976-exp3_G1-1_timestep.nc"
-# verified_path = verification_dir_path + colbeck_3
-# compare_path = data_to_compare_path + colbeck_3
-# model_output_file = "./test_cases/settings/syntheticTestCases/colbeck1976/summa_defineModelOutput.txt"
-# output_vars = get_output_vars(model_output_file)
-# colbeck_3_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Miller_loam")
-# miller_loam = "/miller1998/millerLoam_G1-1_timestep.nc"
-# verified_path = verification_dir_path + colbeck_3
-# compare_path = data_to_compare_path + colbeck_3
-# model_output_file = "./test_cases/settings/meta/Model_Output.txt"
-# output_vars = get_output_vars(model_output_file)
-# miller_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Mizoguchi")
-# mizoguchi = "/mizoguchi1990/mizoguchi1990_G1-1_timestep.nc"
-# verified_path = verification_dir_path + mizoguchi
-# compare_path = data_to_compare_path + mizoguchi
-# model_output_file = "./test_cases/settings/meta/Model_Output.txt"
-# output_vars = get_output_vars(model_output_file)
-# mizoguchi_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Vanderborght_1")
-# vanderborght_1 = "/vanderborght2005/vanderborght2005_exp1_G1-1_timestep.nc"
-# verified_path = verification_dir_path + vanderborght_1
-# compare_path = data_to_compare_path + vanderborght_1
-# model_output_file = "./test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
-# output_vars = get_output_vars(model_output_file)
-# vanderborght_1_erros = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Vanderborght_2")
-# vanderborght_2 = "/vanderborght2005/vanderborght2005_exp2_G1-1_timestep.nc"
-# verified_path = verification_dir_path + vanderborght_2
-# compare_path = data_to_compare_path + vanderborght_2
-# model_output_file = "./test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
-# output_vars = get_output_vars(model_output_file)
-# vanderborght_2_erros = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
-# print("Checking Vanderborght_ 2")
-# vanderborght_3 = "/vanderborght2005/vanderborght2005_exp3_G1-1_timestep.nc"
-# verified_path = verification_dir_path + vanderborght_3
-# compare_path = data_to_compare_path + vanderborght_3
-# model_output_file = "./test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
-# output_vars = get_output_vars(model_output_file)
-# vanderborght_3_erros = verify_data(verified_path, compare_path, num_hru, output_vars)
-# print()
+miller_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
+print()
+
+
+print("Checking Mizoguchi")
+mizoguchi = "/mizoguchi1990/mizoguchi1990_G1-1_timestep.nc"
+verified_path = verification_dir_path + mizoguchi
+compare_path = actors_output_path + mizoguchi
+model_output_file = "./test_cases/settings/meta/Model_Output.txt"
+output_vars = get_output_vars(model_output_file)
+mizoguchi_errors = verify_data(verified_path, compare_path, num_hru, output_vars)
+print()
+
+
+print("Checking Vanderborght_1")
+vanderborght_1 = "/vanderborght2005/vanderborght2005_exp1_G1-1_timestep.nc"
+verified_path = verification_dir_path + vanderborght_1
+compare_path = actors_output_path + vanderborght_1
+model_output_file = "./test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
+output_vars = get_output_vars(model_output_file)
+vanderborght_1_erros = verify_data(verified_path, compare_path, num_hru, output_vars)
+print()
+
+
+print("Checking Vanderborght_2")
+vanderborght_2 = "/vanderborght2005/vanderborght2005_exp2_G1-1_timestep.nc"
+verified_path = verification_dir_path + vanderborght_2
+compare_path = actors_output_path + vanderborght_2
+model_output_file = "./test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
+output_vars = get_output_vars(model_output_file)
+vanderborght_2_erros = verify_data(verified_path, compare_path, num_hru, output_vars)
+print()
+
+
+print("Checking Vanderborght_ 2")
+vanderborght_3 = "/vanderborght2005/vanderborght2005_exp3_G1-1_timestep.nc"
+verified_path = verification_dir_path + vanderborght_3
+compare_path = actors_output_path + vanderborght_3
+model_output_file = "./test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
+output_vars = get_output_vars(model_output_file)
+vanderborght_3_erros = verify_data(verified_path, compare_path, num_hru, output_vars)
+print()
 print("Finished Checking Output")
 print("     Total Errors For Celia", celia_errors)
-# print("     Total Errors For Colbeck_1", colbeck_1_errors)
-# print("     Total Errors For Colbeck_2", colbeck_2_errors)
-# print("     Total Errors For Colbeck_3", colbeck_3_errors)
-# print("     Total Errors For Miller_Loam", miller_errors)
-# print("     Total Errors For Mizoguchi", mizoguchi_errors)
-# print("     Total Errors For Vanderborght", vanderborght_1_erros)
-# print("     Total Errors For Vanderborght", vanderborght_2_erros)
-# print("     Total Errors For Vanderborght", vanderborght_3_erros)
+print("     Total Errors For Colbeck_1", colbeck_1_errors)
+print("     Total Errors For Colbeck_2", colbeck_2_errors)
+print("     Total Errors For Colbeck_3", colbeck_3_errors)
+print("     Total Errors For Miller_Loam", miller_errors)
+print("     Total Errors For Mizoguchi", mizoguchi_errors)
+print("     Total Errors For Vanderborght", vanderborght_1_erros)
+print("     Total Errors For Vanderborght", vanderborght_2_erros)
+print("     Total Errors For Vanderborght", vanderborght_3_erros)
 

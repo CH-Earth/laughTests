@@ -20,7 +20,7 @@
   },
   
   "JobActor": {
-      "FileManagerPath": "/Summa-Actors/Laugh-Tests/test_cases/settings/syntheticTestCases/celia1990/actors/summa_fileManager_celia1990_test.txt",
+      "FileManagerPath": "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/celia1990/actors/summa_fileManager_celia1990_test.txt",
       "outputCSV": false,
       "csvPath": "/Summa-Actors/Laugh-Tests/test_cases/output/actors/celia1990/"
   },

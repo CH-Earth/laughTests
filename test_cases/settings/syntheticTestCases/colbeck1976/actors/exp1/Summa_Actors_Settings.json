@@ -20,7 +20,7 @@
   },
   
   "JobActor": {
-      "FileManagerPath": "/Summa-Actors/Laugh-Tests/test_cases/settings/syntheticTestCases/colbeck1976/actors/summa_fileManager_colbeck1976-exp1_test.txt",
+      "FileManagerPath": "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/colbeck1976/actors/summa_fileManager_colbeck1976-exp1_test.txt",
       "outputCSV": false,
       "csvPath": ""
   },
