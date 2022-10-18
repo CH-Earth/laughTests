@@ -21,5 +21,10 @@ echo "Starting Vanderborght"
 ./run_vanderborght.sh
 echo ""
 # Wigmosta
-/SUMMA/bin/summa_sundials.exe -g 1 1 -m /SUMMA/Laugh-Tests/settings/syntheticTestCases/wigmosta1999/summa_fileManager-exp1_test.txt > ../../test_cases/output/wigmosta1999/wigmosta1.txt
-/SUMMA/bin/summa_sundials.exe -g 1 1 -m /SUMMA/Laugh-Tests/settings/syntheticTestCases/wigmosta1999/summa_fileManager-exp2_test.txt > ../../test_cases/output/wigmosta1999/wigmosta2.txt
+echo "Starting Wigmosta"
+./run_wigmosta.sh
+echo ""
+# Umpqua
+echo "Starting Umpqua"
+./run_umpqua.sh
+echo "

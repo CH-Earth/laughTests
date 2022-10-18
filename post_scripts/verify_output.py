@@ -89,12 +89,12 @@ def get_output_vars(model_output_file):
 
 num_hru = 1
 actors_output_path = "/Summa-Actors/laugh_tests/test_cases/output/actors"
-non_actors_output_path = "/SUMMA/laugh_tests/test_cases/output/non-actors"
+non_actors_output_path = "/SUMMA/laugh_tests/test_cases/output/non_actors"
 verification_dir_path = "../validation_data/m2_mac_Sept23"
 
 
 print("Checking Celia")
-celia_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/celia1990/celia1990_G1-1_timestep.nc"
+celia_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/celia1990/celia1990_G1-1_timestep.nc"
 celia_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
 
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
@@ -105,7 +105,7 @@ print()
 
 
 print("Checking Colbeck_1")
-colbeck_1_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/colbeck1976/colbeck1976-exp1_G1-1_timestep.nc"
+colbeck_1_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/colbeck1976/colbeck1976-exp1_G1-1_timestep.nc"
 colbeck_1_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
 output_vars = get_output_vars(model_output_file)
@@ -114,7 +114,7 @@ print()
 
 
 print("Checking Colbeck_2")
-colbeck_2_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/colbeck1976/colbeck1976-exp2_G1-1_timestep.nc"
+colbeck_2_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/colbeck1976/colbeck1976-exp2_G1-1_timestep.nc"
 colbeck_2_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
 output_vars = get_output_vars(model_output_file)
@@ -123,7 +123,7 @@ print()
 
 
 print("Checking Colbeck_3")
-colbeck_3_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/colbeck1976/colbeck1976-exp3_G1-1_timestep.nc"
+colbeck_3_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/colbeck1976/colbeck1976-exp3_G1-1_timestep.nc"
 colbeck_3_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
 output_vars = get_output_vars(model_output_file)
@@ -132,7 +132,7 @@ print()
 
 
 print("Checking Miller_loam")
-miller_loam_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/miller1998/millerLoam_G1-1_timestep.nc"
+miller_loam_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/miller1998/millerLoam_G1-1_timestep.nc"
 miller_loam_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/miller1998/millerLoamGRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
@@ -141,7 +141,7 @@ print()
 
 
 print("Checking Mizoguchi")
-mizoguchi_non_actors = "/SUMMA/laugh_tests/test_cases/output/non-actors/mizoguchi1990/mizoguchi1990_G1-1_timestep.nc"
+mizoguchi_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/mizoguchi1990/mizoguchi1990_G1-1_timestep.nc"
 mizoguchi_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/mizoguchi1990/mizoguchi1990GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
@@ -150,7 +150,7 @@ print()
 
 
 print("Checking Vanderborght_1")
-vanderborght_1_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non-actors/vanderborght2005/vanderborght2005_exp1_G1-1_timestep.nc"
+vanderborght_1_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non_actors/vanderborght2005/vanderborght2005_exp1_G1-1_timestep.nc"
 vanderborght_1_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp1GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
@@ -159,7 +159,7 @@ print()
 
 
 print("Checking Vanderborght_2")
-vanderborght_2_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non-actors/vanderborght2005/vanderborght2005_exp2_G1-1_timestep.nc"
+vanderborght_2_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non_actors/vanderborght2005/vanderborght2005_exp2_G1-1_timestep.nc"
 vanderborght_2_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp2GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
@@ -168,7 +168,7 @@ print()
 
 
 print("Checking Vanderborght_3")
-vanderborght_3_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non-actors/vanderborght2005/vanderborght2005_exp3_G1-1_timestep.nc"
+vanderborght_3_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non_actors/vanderborght2005/vanderborght2005_exp3_G1-1_timestep.nc"
 vanderborght_3_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp3GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)

@@ -4,7 +4,7 @@ simEndTime           '1990-01-01 01:00' !
 tmZoneInfo           'localTime' ! Time zone info
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/vanderborght2005/' !  input_path
-outputPath           '<BASEDIR>/output/non-actors/vanderborght2005/' !  output_path
+outputPath           '<BASEDIR>/output/non_actors/vanderborght2005/' !  output_path
 decisionsFile        'syntheticTestCases/vanderborght2005/common/summa_zDecisions_vanderborght2005.txt' !  decision
 outputControlFile    'syntheticTestCases/vanderborght2005/common/Model_Output.txt' !  ouput_file
 globalHruParamFile   'syntheticTestCases/vanderborght2005/common/summa_zLocalParamInfo.txt' !  local_par

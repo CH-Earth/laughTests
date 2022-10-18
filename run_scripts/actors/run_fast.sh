@@ -10,7 +10,7 @@ echo "Starting Colbeck"
 echo ""
 # Miller
 echo "Starting Miller"
-$SUMMADIR/bin/summaMain -g 1 1 -m $BASEDIR/test_cases/settings/syntheticTestCases/miller1998/actors/summa_fileManager_millerLoam_test.txt > ../../test_cases/output/actors/miller1998/miller_loam.txt
+$SUMMADIR/bin/summaMain -g 1 -n 1 -c $BASEDIR/test_cases/settings/syntheticTestCases/miller1998/actors/summa_fileManager_millerLoam_test.txt > ../../test_cases/output/actors/miller1998/miller_loam.txt
 echo ""
 # Mizoguchi
 echo "Starting Mizoguchi"
