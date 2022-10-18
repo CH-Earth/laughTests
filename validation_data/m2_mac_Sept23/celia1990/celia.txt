@@ -7,20 +7,20 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/celia1
    5 settingsPath: /SUMMA/Laugh-Tests/test_cases/settings/
    6 forcingPath: /SUMMA/Laugh-Tests/test_cases/input_data/celia1990/
    7 outputPath: /SUMMA/Laugh-Tests/test_cases/output/celia1990/
-   8 decisionsFile: syntheticTestCases/celia1990/summa_zDecisions_celia1990.txt
+   8 decisionsFile: syntheticTestCases/celia1990/summa_zDecisions.txt
    9 outputControlFile: meta/Model_Output.txt
   10 globalHruParamFile: syntheticTestCases/celia1990/summa_zLocalParamInfo.txt
   11 globalGruParamFile: syntheticTestCases/celia1990/summa_zBasinParamInfo.txt
   12 attributeFile: syntheticTestCases/celia1990/summa_zLocalAttributes.nc
-  13 trialParamFile: syntheticTestCases/celia1990/summa_zParamTrial_celia1990.nc
+  13 trialParamFile: syntheticTestCases/celia1990/summa_zParamTrial.nc
   14 forcingListFile: syntheticTestCases/celia1990/summa_zForcingFileList.txt
-  15 initConditionFile: syntheticTestCases/celia1990/summa_zInitialCond_celia1990.nc
+  15 initConditionFile: syntheticTestCases/celia1990/summa_zInitialCond.nc
   16 outFilePrefix: celia1990
   17 vegTableFile: VEGPARM.TBL
   18 soilTableFile: SOILPARM.TBL
   19 generalTableFile: GENPARM.TBL
   20 noahmpTableFile: MPTABLE.TBL
-decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/celia1990/summa_zDecisions_celia1990.txt
+decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/celia1990/summa_zDecisions.txt
    1 soilCatTbl: ROSETTA
    2 vegeParTbl: USGS
    3 soilStress: NoahType

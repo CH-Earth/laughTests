@@ -7,7 +7,7 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/miller
    5 settingsPath: /SUMMA/Laugh-Tests/test_cases/settings/
    6 forcingPath: /SUMMA/Laugh-Tests/test_cases/input_data/miller1998/
    7 outputPath: /SUMMA/Laugh-Tests/test_cases/output/miller1998/
-   8 decisionsFile: syntheticTestCases/miller1998/summa_zDecisions_miller1998.txt
+   8 decisionsFile: syntheticTestCases/miller1998/summa_zDecisions.txt
    9 outputControlFile: meta/Model_Output.txt
   10 globalHruParamFile: syntheticTestCases/miller1998/summa_zLocalParamInfo.txt
   11 globalGruParamFile: syntheticTestCases/miller1998/summa_zBasinParamInfo.txt
@@ -20,7 +20,7 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/miller
   18 soilTableFile: SOILPARM.TBL
   19 generalTableFile: GENPARM.TBL
   20 noahmpTableFile: MPTABLE.TBL
-decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/miller1998/summa_zDecisions_miller1998.txt
+decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/miller1998/summa_zDecisions.txt
    1 soilCatTbl: ROSETTA
    2 vegeParTbl: USGS
    3 soilStress: NoahType

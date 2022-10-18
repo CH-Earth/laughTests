@@ -6,7 +6,7 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/colbec
    4 settingsPath: /SUMMA/Laugh-Tests/test_cases/settings/
    5 forcingPath: /SUMMA/Laugh-Tests/test_cases/input_data/colbeck1976/
    6 outputPath: /SUMMA/Laugh-Tests/test_cases/output/colbeck1976/
-   7 decisionsFile: syntheticTestCases/colbeck1976/summa_zDecisions_colbeck1976.txt
+   7 decisionsFile: syntheticTestCases/colbeck1976/summa_zDecisions.txt
    8 outputControlFile: syntheticTestCases/colbeck1976/summa_defineModelOutput.txt
    9 globalHruParamFile: syntheticTestCases/colbeck1976/summa_zLocalParamInfo.txt
   10 globalGruParamFile: syntheticTestCases/colbeck1976/summa_zBasinParamInfo.txt
@@ -19,7 +19,7 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/colbec
   17 soilTableFile: SOILPARM.TBL
   18 generalTableFile: GENPARM.TBL
   19 noahmpTableFile: MPTABLE.TBL
-decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/colbeck1976/summa_zDecisions_colbeck1976.txt
+decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/colbeck1976/summa_zDecisions.txt
    1 soilCatTbl: ROSETTA
    2 vegeParTbl: USGS
    3 soilStress: NoahType

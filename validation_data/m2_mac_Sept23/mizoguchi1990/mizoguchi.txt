@@ -7,20 +7,20 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/mizogu
    5 settingsPath: /SUMMA/Laugh-Tests/test_cases/settings/
    6 forcingPath: /SUMMA/Laugh-Tests/test_cases/input_data/mizoguchi1990/
    7 outputPath: /SUMMA/Laugh-Tests/test_cases/output/mizoguchi1990/
-   8 decisionsFile: syntheticTestCases/mizoguchi1990/summa_zDecisions_mizoguchi.txt
+   8 decisionsFile: syntheticTestCases/mizoguchi1990/summa_zDecisions.txt
    9 outputControlFile: meta/Model_Output.txt
   10 globalHruParamFile: syntheticTestCases/mizoguchi1990/summa_zLocalParamInfo.txt
   11 globalGruParamFile: syntheticTestCases/mizoguchi1990/summa_zBasinParamInfo.txt
   12 attributeFile: syntheticTestCases/mizoguchi1990/summa_zLocalAttributes.nc
-  13 trialParamFile: syntheticTestCases/mizoguchi1990/summa_zParamTrial_mizoguchi.nc
+  13 trialParamFile: syntheticTestCases/mizoguchi1990/summa_zParamTrial.nc
   14 forcingListFile: syntheticTestCases/mizoguchi1990/summa_zForcingFileList.txt
-  15 initConditionFile: syntheticTestCases/mizoguchi1990/summa_zInitialCond_mizoguchi.nc
+  15 initConditionFile: syntheticTestCases/mizoguchi1990/summa_zInitialCond.nc
   16 outFilePrefix: mizoguchi1990
   17 vegTableFile: VEGPARM.TBL
   18 soilTableFile: SOILPARM.TBL
   19 generalTableFile: GENPARM.TBL
   20 noahmpTableFile: MPTABLE.TBL
-decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/mizoguchi1990/summa_zDecisions_mizoguchi.txt
+decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/mizoguchi1990/summa_zDecisions.txt
    1 soilCatTbl: ROSETTA
    2 vegeParTbl: USGS
    3 soilStress: NoahType

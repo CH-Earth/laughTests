@@ -5,14 +5,14 @@ tmZoneInfo           'localTime' !
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/mizoguchi1990/' !  input_path
 outputPath           '<BASEDIR>/output/non_actors/mizoguchi1990/' !  output_path
-decisionsFile        'syntheticTestCases/mizoguchi1990/common/summa_zDecisions_mizoguchi.txt' !  decision
+decisionsFile        'syntheticTestCases/mizoguchi1990/common/summa_zDecisions.txt' !  decision
 outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
 globalHruParamFile   'syntheticTestCases/mizoguchi1990/common/summa_zLocalParamInfo.txt' !  local_par
 globalGruParamFile   'syntheticTestCases/mizoguchi1990/common/summa_zBasinParamInfo.txt' !  basin_par
 attributeFile        'syntheticTestCases/mizoguchi1990/common/summa_zLocalAttributes.nc' !  local_attr
-trialParamFile       'syntheticTestCases/mizoguchi1990/common/summa_zParamTrial_mizoguchi.nc' !  para_trial
+trialParamFile       'syntheticTestCases/mizoguchi1990/common/summa_zParamTrial.nc' !  para_trial
 forcingListFile      'syntheticTestCases/mizoguchi1990/common/summa_zForcingFileList.txt' !  forcing_list
-initConditionFile    'syntheticTestCases/mizoguchi1990/common/summa_zInitialCond_mizoguchi.nc' !  initial_cond
+initConditionFile    'syntheticTestCases/mizoguchi1990/common/summa_zInitialCond.nc' !  initial_cond
 outFilePrefix        'mizoguchi1990' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' ! 
 soilTableFile        'meta/SOILPARM.TBL' ! 

@@ -7,20 +7,20 @@ file_master is '/SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/vander
    5 settingsPath: /SUMMA/Laugh-Tests/test_cases/settings/
    6 forcingPath: /SUMMA/Laugh-Tests/test_cases/input_data/vanderborght2005/
    7 outputPath: /SUMMA/Laugh-Tests/test_cases/output/vanderborght2005/
-   8 decisionsFile: syntheticTestCases/vanderborght2005/summa_zDecisions_vanderborght2005.txt
+   8 decisionsFile: syntheticTestCases/vanderborght2005/summa_zDecisions.txt
    9 outputControlFile: syntheticTestCases/vanderborght2005/Model_Output.txt
   10 globalHruParamFile: syntheticTestCases/vanderborght2005/summa_zLocalParamInfo.txt
   11 globalGruParamFile: syntheticTestCases/vanderborght2005/summa_zBasinParamInfo.txt
   12 attributeFile: syntheticTestCases/vanderborght2005/summa_zLocalAttributes.nc
   13 trialParamFile: syntheticTestCases/vanderborght2005/summa_zParamTrial_vanderborght2005_exp3.nc
   14 forcingListFile: syntheticTestCases/vanderborght2005/summa_zForcingFileList.txt
-  15 initConditionFile: syntheticTestCases/vanderborght2005/summa_zInitialCond_vanderborght2005.nc
+  15 initConditionFile: syntheticTestCases/vanderborght2005/summa_zInitialCond.nc
   16 outFilePrefix: vanderborght2005_exp3
   17 vegTableFile: VEGPARM.TBL
   18 soilTableFile: SOILPARM.TBL
   19 generalTableFile: GENPARM.TBL
   20 noahmpTableFile: MPTABLE.TBL
-decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/vanderborght2005/summa_zDecisions_vanderborght2005.txt
+decisions file =  /SUMMA/Laugh-Tests/test_cases/settings/syntheticTestCases/vanderborght2005/summa_zDecisions.txt
    1 soilCatTbl: ROSETTA
    2 vegeParTbl: USGS
    3 soilStress: NoahType

@@ -28,3 +28,7 @@ echo ""
 echo "Starting Umpqua"
 ./run_umpqua.sh
 echo "
+# Reynolds
+echo "Starting Reynolds"
+./run_reynolds.sh
+echo "

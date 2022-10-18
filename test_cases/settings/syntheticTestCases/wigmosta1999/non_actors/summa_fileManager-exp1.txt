@@ -10,10 +10,10 @@ outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
 globalHruParamFile   'syntheticTestCases/wigmosta1999/common/summa_zLocalParamInfo.txt' !  local_par
 globalGruParamFile   'syntheticTestCases/wigmosta1999/common/summa_zBasinParamInfo.txt' !  basin_par
 attributeFile        'syntheticTestCases/wigmosta1999/common/summa_zLocalAttributes.nc' !  local_attr
-trialParamFile       'syntheticTestCases/wigmosta1999/common/summa_zParamTrial-exp1.nc' !  para_trial
+trialParamFile       'syntheticTestCases/wigmosta1999/common/summa_zParamTrial_wigmosta1999_exp1.nc' !  para_trial
 forcingListFile      'syntheticTestCases/wigmosta1999/common/summa_zForcingFileList.txt' !  forcing_list
 initConditionFile    'syntheticTestCases/wigmosta1999/common/summa_zInitialCond.nc' !  initial_cond
-outFilePrefix        'syntheticHillslope-exp1' !  output_prefix
+outFilePrefix        'wigmosta-exp1' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' ! 
 soilTableFile        'meta/SOILPARM.TBL' ! 
 generalTableFile     'meta/GENPARM.TBL' ! 

@@ -63,9 +63,8 @@ howHeatCap                      enthalpyFD      ! (30)
 ! Jarvis    ! Jarvis
 ! -----------------------------------------------------------------------------------------------
 ! (07) choice of numerical method
-! itertive  ! iterative
-! non_iter  ! non-iterative
-! itersurf  ! iterate only on the surface energy balance
+! bEuler    ! home-grown backward Euler
+! sundials  ! SUNDIALS solver
 ! -----------------------------------------------------------------------------------------------
 ! (08) method used to calculate flux derivatives
 ! numericl  ! numerical derivatives
@@ -116,7 +115,7 @@ howHeatCap                      enthalpyFD      ! (30)
 ! difTrans  ! parameterized as a function of diffuse transmissivity
 ! -----------------------------------------------------------------------------------------------
 ! (19) choice of parameterization for snow interception
-! stickySnow  ! maximum interception capacity an increasing function of temerature
+! stickySnow  ! maximum interception capacity an increasing function of temperature
 ! lightSnow   ! maximum interception capacity an inverse function of new snow density
 ! -----------------------------------------------------------------------------------------------
 ! (20) choice of wind profile

@@ -5,14 +5,14 @@ tmZoneInfo           'localTime' ! Time zone info
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/vanderborght2005/' !  input_path
 outputPath           '<BASEDIR>/output/non_actors/vanderborght2005/' !  output_path
-decisionsFile        'syntheticTestCases/vanderborght2005/common/summa_zDecisions_vanderborght2005.txt' !  decision
+decisionsFile        'syntheticTestCases/vanderborght2005/common/summa_zDecisions.txt' !  decision
 outputControlFile    'syntheticTestCases/vanderborght2005/common/Model_Output.txt' !  ouput_file
 globalHruParamFile   'syntheticTestCases/vanderborght2005/common/summa_zLocalParamInfo.txt' !  local_par
 globalGruParamFile   'syntheticTestCases/vanderborght2005/common/summa_zBasinParamInfo.txt' !  basin_par
 attributeFile        'syntheticTestCases/vanderborght2005/common/summa_zLocalAttributes.nc' !  local_attr
 trialParamFile       'syntheticTestCases/vanderborght2005/common/summa_zParamTrial_vanderborght2005_exp2.nc' !  para_trial
 forcingListFile      'syntheticTestCases/vanderborght2005/common/summa_zForcingFileList.txt' !  forcing_list
-initConditionFile    'syntheticTestCases/vanderborght2005/common/summa_zInitialCond_vanderborght2005.nc' !  initial_cond
+initConditionFile    'syntheticTestCases/vanderborght2005/common/summa_zInitialCond.nc' !  initial_cond
 outFilePrefix        'vanderborght2005_exp2' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !

@@ -19,8 +19,8 @@ mkdir -p test_cases/output/non_actors/vanderborght2005
 mkdir -p test_cases/output/actors/wigmosta1999
 mkdir -p test_cases/output/non_actors/wigmosta1999
 
-mkdir -p test_cases/output/actors/umpqua1996
-mkdir -p test_cases/output/non_actors/umpqua1996
+mkdir -p test_cases/output/actors/umpqua_snowIncept
+mkdir -p test_cases/output/non_actors/umpqua_snowIncept
 
 
 # # modify the paths in the model input file

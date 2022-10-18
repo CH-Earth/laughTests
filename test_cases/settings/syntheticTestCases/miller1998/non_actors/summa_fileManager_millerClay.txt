@@ -5,7 +5,7 @@ tmZoneInfo           'localTime' !
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/miller1998/' !  input_path
 outputPath           '<BASEDIR>/output/non_actors/miller1998/' !  output_path
-decisionsFile        'syntheticTestCases/miller1998/common/summa_zDecisions_miller1998.txt' !  decision
+decisionsFile        'syntheticTestCases/miller1998/common/summa_zDecisions.txt' !  decision
 outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
 globalHruParamFile   'syntheticTestCases/miller1998/common/summa_zLocalParamInfo.txt' !  local_par
 globalGruParamFile   'syntheticTestCases/miller1998/common/summa_zBasinParamInfo.txt' !  basin_par
