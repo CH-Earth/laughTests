@@ -1,0 +1,21 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '2006-07-01 00:00' ! 
+simEndTime           '2007-09-30 00:00' ! 
+tmZoneInfo           'localTime' ! 
+settingsPath         '/home/stiff/summaTestCases_3.0/settings/' !  setting_path
+forcingPath          '/home/stiff/summaTestCases_3.0/testCases_data/inputData/fieldData/reynolds/' !  input_path
+outputPath           '/home/stiff/summaTestCases_3.0/output/wrrPaperTestCases/figure07/' !  output_path
+decisionsFile        'wrrPaperTestCases/figure07/summa_zDecisions_riparianAspenJarvis.txt' !  decision
+outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
+globalHruParamFile   'wrrPaperTestCases/figure07/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/figure07/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/figure07/summa_zLocalAttributes_riparianAspen.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/figure07/summa_zParamTrial_riparianAspen.nc' !  para_trial
+forcingListFile      'wrrPaperTestCases/figure07/summa_zForcingFileList_riparianAspen.txt' !  forcing_list
+initConditionFile    'wrrPaperTestCases/figure07/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'vegImpactsTranspire' !  output_prefix
+vegTableFile         'VEGPARM.TBL' ! 
+soilTableFile        'SOILPARM.TBL' ! 
+generalTableFile     'GENPARM.TBL' ! 
+noahmpTableFile      'MPTABLE.TBL' ! 
+! history Mon Jul 20 16:08:15 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./wrrPaperTestCases/figure07/summa_fileManager_riparianAspenJarvis.txt
