@@ -22,8 +22,14 @@ mkdir -p test_cases/output/non_actors/wigmosta1999
 mkdir -p test_cases/output/actors/umpqua_snowIncept
 mkdir -p test_cases/output/non_actors/umpqua_snowIncept
 
-mkdir -p test_cases/output/actors/reynolds_canopySrad
-mkdir -p test_cases/output/non_actors/reynolds_canopySrad
+mkdir -p test_cases/output/actors/reynolds_canopySrad_windPrfile_stomResist
+mkdir -p test_cases/output/non_actors/reynolds_canopySrad_windPrfile_stomResist
+
+mkdir -p test_cases/output/actors/reynolds_groundwatr
+mkdir -p test_cases/output/non_actors/reynolds_groundwatr
+
+mkdir -p test_cases/output/actors/senator_alb_method
+mkdir -p test_cases/output/non_actors/senator_alb_method
 
 
 # # modify the paths in the model input file

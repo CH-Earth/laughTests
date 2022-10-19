@@ -20,3 +20,7 @@ echo ""
 echo "Starting Vanderborght"
 ./run_vanderborght.sh
 echo ""
+# Umpqua
+echo "Starting Umpqua"
+./run_umpqua.sh
+echo "
