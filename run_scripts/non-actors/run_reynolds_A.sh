@@ -1,6 +1,7 @@
 #! /bin/bash
 
-$SUMMADIR/bin/summa_sundials.exe -g 1 1 -m $BASEDIR/test_cases/settings/wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/non_actors/summa_fileManager_reynoldsDefault_test.txt > ../../test_cases/output/non_actors/reynolds_canopySrad_windPrfile_stomResist/reynoldsDefault.txtecho "Reynolds A 1 Finished"
+$SUMMADIR/bin/summa_sundials.exe -g 1 1 -m $BASEDIR/test_cases/settings/wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/non_actors/summa_fileManager_reynoldsDefault_test.txt > ../../test_cases/output/non_actors/reynolds_canopySrad_windPrfile_stomResist/reynoldsDefault.txt
+echo "Reynolds A 1 Finished"
 $SUMMADIR/bin/summa_sundials.exe -g 1 1 -m $BASEDIR/test_cases/settings/wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/non_actors/summa_fileManager_reynoldsUEB2stream_test.txt > ../../test_cases/output/non_actors/reynolds_canopySrad_windPrfile_stomResist/reynoldsUEB2stream.txt
 echo "Reynolds A 2 Finished"
 $SUMMADIR/bin/summa_sundials.exe -g 1 1 -m $BASEDIR/test_cases/settings/wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/non_actors/summa_fileManager_reynoldsNLscatter_test.txt > ../../test_cases/output/non_actors/reynolds_canopySrad_windPrfile_stomResist/reynoldsNLscatter.txt
