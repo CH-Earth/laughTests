@@ -1,0 +1,21 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '1997-11-26 00:00' ! 
+simEndTime           '1998-04-07 02:00' ! 
+tmZoneInfo           'localTime' ! 
+settingsPath         '/home/stiff/summaTestCases_3.0/settings/' !  setting_path
+forcingPath          '/home/stiff/summaTestCases_3.0/testCases_data/inputData/fieldData/umpqua/' !  input_path
+outputPath           '/home/stiff/summaTestCases_3.0/output/wrrPaperTestCases/figure05/' !  output_path
+decisionsFile        'wrrPaperTestCases/figure05/summa_zDecisions_9798_hedpom.txt' !  decision
+outputControlFile    'meta/Model_Output.txt' !  ouput_file
+globalHruParamFile   'wrrPaperTestCases/figure05/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/figure05/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/figure05/summa_zLocalAttributes_treePP.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/figure05/summa_zParamTrial_hedpomPP.txt' !  para_trial
+forcingListFile      'wrrPaperTestCases/figure05/summa_zForcingFileList_treePP_9798.txt' !  forcing_list
+initConditionFile    'wrrPaperTestCases/figure05/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'storckSite' !  output_prefix
+vegTableFile         'VEGPARM.TBL' ! 
+soilTableFile        'SOILPARM.TBL' ! 
+generalTableFile     'GENPARM.TBL' ! 
+noahmpTableFile      'MPTABLE.TBL' ! 
+! history Mon Jul 20 16:08:16 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./wrrPaperTestCases/figure05/summa_fileManager_9798_hedpom.txt
