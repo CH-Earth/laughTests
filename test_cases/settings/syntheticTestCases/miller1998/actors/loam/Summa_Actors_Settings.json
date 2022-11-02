@@ -1,32 +1,32 @@
 {
-  "DistributedSettings": {
-      "distributed-mode": false,
-      "host": "localhost",
-      "port": 4444
-  },
-
-  "SimulationSettings": {
-      "total_hru_count": 100000,
-      "num_hru_per_batch": 500
-  },
-
-  "SummaActor": {
-      "OuputStructureSize": 250,
-      "maxGRUPerJob": 250
-  },
-
-  "FileAccessActor": {
-      "num_vectors_in_output_manager": 1
-  },
+    "Distributed_Settings": {
+        "distributed_mode": false,
+        "hostname": "localhost",
+        "port": 4444,
+        "total_hru_count": 0,
+        "num_hru_per_batch": 0,
+        "heartbeat_interval": 10,
+        "lost_node_threshold": 3
   
-  "JobActor": {
-      "FileManagerPath": "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/miller1998/actors/summa_fileManager_millerLoam_test.txt",
-      "outputCSV": false,
-      "csvPath": "/scratch/kck540/csv/"
-  },
-
-  "HRUActor": {
-      "printOutput": true,
-      "outputFrequency": 1
-  }
+    },
+  
+    "Summa_Actor": {
+      "max_gru_per_job": 250
+    },
+  
+    "File_Access_Actor": {
+      "num_vectors_in_output_manager": 1
+    },
+  
+    "Job_Actor": {
+      "file_manager_path": "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/miller1998/actors/summa_fileManager_millerLoam_test.txt",
+      "output_structure_size": 1,
+      "output_csv": false,
+      "csv_path": ""
+    },
+    
+    "HRU_Actor": {
+      "print_output": true,
+      "output_frequency": 1
+    }
 }
