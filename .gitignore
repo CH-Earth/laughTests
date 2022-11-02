@@ -32,3 +32,14 @@ test_cases/settings/syntheticTestCases/wigmosta1999/actors/summa_fileManager-exp
 test_cases/settings/syntheticTestCases/wigmosta1999/actors/summa_fileManager-exp2_test.txt
 test_cases/settings/syntheticTestCases/wigmosta1999/non_actors/summa_fileManager-exp1_test.txt
 test_cases/settings/syntheticTestCases/wigmosta1999/non_actors/summa_fileManager-exp2_test.txt
+
+test_cases/settings/syntheticTestCases/wigmosta1999/actors/*test.txt
+test_cases/settings/syntheticTestCases/wigmosta1999/non_actors/*test.txt
+test_cases/settings/wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/actors/*test.txt
+test_cases/settings/wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/non_actors/*test.txt
+test_cases/settings/wrrPaperTestCases/reynolds_groundwatr/actors/*test.txt
+test_cases/settings/wrrPaperTestCases/reynolds_groundwatr/non_actors/*test.txt
+test_cases/settings/wrrPaperTestCases/senator_alb_method/actors/*test.txt
+test_cases/settings/wrrPaperTestCases/senator_alb_method/non_actors/*test.txt
+test_cases/settings/wrrPaperTestCases/umpqua_snowIncept/actors/*test.txt
+test_cases/settings/wrrPaperTestCases/umpqua_snowIncept/non_actors/*test.txt
