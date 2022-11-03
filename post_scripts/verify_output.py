@@ -94,8 +94,8 @@ verification_dir_path = "../validation_data/m2_mac_Sept23"
 
 
 print("Checking Celia")
-celia_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/celia1990/celia1990_G1-1_timestep.nc"
-celia_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
+celia_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
+celia_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
 
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
 
@@ -105,8 +105,8 @@ print()
 
 
 print("Checking Colbeck_1")
-colbeck_1_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/colbeck1976/colbeck1976-exp1_G1-1_timestep.nc"
-colbeck_1_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
+colbeck_1_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
+colbeck_1_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
 output_vars = get_output_vars(model_output_file)
 colbeck_1_errors = verify_data(colbeck_1_non_actors, colbeck_1_actors, num_hru, output_vars)
@@ -114,8 +114,8 @@ print()
 
 
 print("Checking Colbeck_2")
-colbeck_2_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/colbeck1976/colbeck1976-exp2_G1-1_timestep.nc"
-colbeck_2_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
+colbeck_2_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
+colbeck_2_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
 output_vars = get_output_vars(model_output_file)
 colbeck_2_errors = verify_data(colbeck_2_non_actors, colbeck_2_actors, num_hru, output_vars)
@@ -123,26 +123,26 @@ print()
 
 
 print("Checking Colbeck_3")
-colbeck_3_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/colbeck1976/colbeck1976-exp3_G1-1_timestep.nc"
-colbeck_3_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
+colbeck_3_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
+colbeck_3_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
 output_vars = get_output_vars(model_output_file)
 colbeck_3_errors = verify_data(colbeck_3_non_actors, colbeck_3_actors, num_hru, output_vars)
 print()
 
 
-print("Checking Miller_loam")
-miller_loam_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/miller1998/millerLoam_G1-1_timestep.nc"
-miller_loam_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/miller1998/millerLoamGRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/meta/Model_Output.txt"
-output_vars = get_output_vars(model_output_file)
-miller_errors = verify_data(miller_loam_non_actors, miller_loam_actors, num_hru, output_vars)
-print()
+# print("Checking Miller_loam")
+# miller_loam_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/miller1998/millerLoam_G1-1_timestep.nc"
+# miller_loam_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/miller1998/millerLoamGRU1-1_timestep.nc"
+# model_output_file = "../test_cases/settings/meta/Model_Output.txt"
+# output_vars = get_output_vars(model_output_file)
+# miller_errors = verify_data(miller_loam_non_actors, miller_loam_actors, num_hru, output_vars)
+# print()
 
 
 print("Checking Mizoguchi")
-mizoguchi_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/mizoguchi1990/mizoguchi1990_G1-1_timestep.nc"
-mizoguchi_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/mizoguchi1990/mizoguchi1990GRU1-1_timestep.nc"
+mizoguchi_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/mizoguchi1990/mizoguchi1990GRU1-1_timestep.nc"
+mizoguchi_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/mizoguchi1990/mizoguchi1990GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
 mizoguchi_errors = verify_data(mizoguchi_non_actors, mizoguchi_actors, num_hru, output_vars)
@@ -150,8 +150,8 @@ print()
 
 
 print("Checking Vanderborght_1")
-vanderborght_1_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non_actors/vanderborght2005/vanderborght2005_exp1_G1-1_timestep.nc"
-vanderborght_1_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp1GRU1-1_timestep.nc"
+vanderborght_1_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp1GRU1-1_timestep.nc"
+vanderborght_1_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp1GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
 vanderborght_1_erros = verify_data(vanderborght_1_non_actors, vanderborght_1_actors, num_hru, output_vars)
@@ -159,8 +159,8 @@ print()
 
 
 print("Checking Vanderborght_2")
-vanderborght_2_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non_actors/vanderborght2005/vanderborght2005_exp2_G1-1_timestep.nc"
-vanderborght_2_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp2GRU1-1_timestep.nc"
+vanderborght_2_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp2GRU1-1_timestep.nc"
+vanderborght_2_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp2GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
 vanderborght_2_erros = verify_data(vanderborght_2_non_actors, vanderborght_2_actors, num_hru, output_vars)
@@ -168,8 +168,8 @@ print()
 
 
 print("Checking Vanderborght_3")
-vanderborght_3_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/non_actors/vanderborght2005/vanderborght2005_exp3_G1-1_timestep.nc"
-vanderborght_3_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp3GRU1-1_timestep.nc"
+vanderborght_3_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp3GRU1-1_timestep.nc"
+vanderborght_3_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp3GRU1-1_timestep.nc"
 model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
 vanderborght_3_erros = verify_data(vanderborght_3_non_actors, vanderborght_3_actors, num_hru, output_vars)
@@ -179,7 +179,7 @@ print("     Total Errors For Celia", celia_errors)
 print("     Total Errors For Colbeck_1", colbeck_1_errors)
 print("     Total Errors For Colbeck_2", colbeck_2_errors)
 print("     Total Errors For Colbeck_3", colbeck_3_errors)
-print("     Total Errors For Miller_Loam", miller_errors)
+# print("     Total Errors For Miller_Loam", miller_errors)
 print("     Total Errors For Mizoguchi", mizoguchi_errors)
 print("     Total Errors For Vanderborght", vanderborght_1_erros)
 print("     Total Errors For Vanderborght", vanderborght_2_erros)
