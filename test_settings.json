@@ -1,5 +1,9 @@
 {
-
-
+    "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"],
     
+    "Precision": "single",
+    
+    "Solver": "be",
+
+    "Summa_Exe": "/globalhome/kck540/HPC/Summa-Projects/Summa-Actors/build/summa/bin/summa.exe"
 }

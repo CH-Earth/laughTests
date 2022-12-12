@@ -2,6 +2,7 @@ import os
 import sys
 import subprocess
 import xarray as xr
+import json
 
 """
 Create all of the output directories for the test cases
@@ -43,7 +44,7 @@ def cleanFileManagers(test_cases):
 """
 Setup the file managers for the test cases
 """
-def setupBE(test_cases, precision):
+def setupBE(test_cases, precision, solver):
     basedir = os.getcwd()
     settings_dir = "./test_cases/settings/syntheticTestCases/"
     if precision == "single":
@@ -62,7 +63,7 @@ def setupBE(test_cases, precision):
                 file_manager = os.path.join(file_managers, file_manager)
                 with open(file_manager, 'r') as f:
                     data = f.read()
-                    data = data.replace('<SOLVER>', 'be')
+                    data = data.replace('<SOLVER>', solver)
                     data = data.replace('<BASEDIR>', basedir)
                     data = data.replace('<PRECISION>', precision)
                 
@@ -72,12 +73,11 @@ def setupBE(test_cases, precision):
 """
 Run the test cases
 """
-def runTest(test_cases):
+def runTest(test_cases, summa_exe):
     base_dir = os.getcwd()
     run_script = os.path.join(base_dir, "run_scripts/non-actors/run_non_actors.sh")
     output_path = os.path.join(base_dir, "test_cases/output")
     settings_dir = os.path.join(base_dir, "test_cases/settings/syntheticTestCases")
-    summa_exe = "/globalhome/kck540/HPC/Summa-Projects/Summa-Actors/build/summa/bin/summa.exe"
 
     for dir in test_cases:
         print("Starting Test: " + dir)
@@ -92,35 +92,26 @@ def runTest(test_cases):
             subprocess.call(run_script)
             print("Finished Test: " + dir)
 
-                
 
-syntheticTestCases = ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005"]
-wrrPaperTestCases = ["figure01", "figure02", "figure03", "figure05", "figure06", "figure07", "figure08", "figure09"]
+# Start of main
+with open("test_settings.json", "r") as test_settings_file:
+    test_settings = json.load(test_settings_file)
+    test_cases = test_settings["Test_List"]
+    precision = test_settings["Precision"]
+    solver = test_settings["Solver"]
+    summa_exe = test_settings["Summa_Exe"]
 
-# print(os.getcwd())
-runTest(syntheticTestCases)
-
-# args = sys.argv
-# if len(args) < 2:
-#     print("Usage: python init_tests.py [init,clean]")
-#     sys.exit(1)
-# if args[1] == "clean":
-#     # cleanOutputDirs()
-#     cleanFileManagers(syntheticTestCases)
-# elif args[1] == "init":
-#     initOutputDirs(syntheticTestCases)
-
-# if args[1] == "be" and args[2] == "single":
-#     setupBE(syntheticTestCases, "single", args[3])
-
-# if args[1] == "be" and args[2] == "double":
-#     setupBE(syntheticTestCases, "double", args[3])
-
-
-
-
-# initOutputDirs(syntheticTestCases)
-# initOutputDirs(wrrPaperTestCases)
-
-# cleanOutputDirs(syntheticTestCases)
-# cleanOutputDirs(wrrPaperTestCases)
+if len(args) < 2:
+    if args[1] == "init":
+        initOutputDirs(test_cases)
+        setupBE(test_cases, precision, solver)
+    elif args[1] == "clean":
+        cleanOutputDirs(test_cases)
+        cleanFileManagers(test_cases)
+    elif args[1] == "reset":
+        cleanFileManagers(test_cases)
+    elif args[1] == "run":
+        runTest(test_cases)
+    else:
+        print("Invalid argument")
+        print("Valid arguments are: init, run, reset, clean")
