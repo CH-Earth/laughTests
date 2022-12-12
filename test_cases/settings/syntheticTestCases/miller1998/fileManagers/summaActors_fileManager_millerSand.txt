@@ -5,15 +5,15 @@ tmZoneInfo           'localTime' ! Time zone info
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/miller1998/' !  input_path
 outputPath           '<BASEDIR>/output/actors/miller1998/' !  output_path
-decisionsFile        'syntheticTestCases/miller1998/common/summa_zDecisions.txt' !  decision
+decisionsFile        'syntheticTestCases/miller1998/summa_zDecisions_<SOLVER>.txt' !  decision
 outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
-globalHruParamFile   'syntheticTestCases/miller1998/common/summa_zLocalParamInfo.txt' !  local_par
-globalGruParamFile   'syntheticTestCases/miller1998/common/summa_zBasinParamInfo.txt' !  basin_par
-attributeFile        'syntheticTestCases/miller1998/common/summa_zLocalAttributes.nc' !  local_attr
-trialParamFile       'syntheticTestCases/miller1998/common/summa_zParamTrial_millerSand.nc' !  para_trial
-forcingListFile      'syntheticTestCases/miller1998/common/summa_zForcingFileList_<PRECISION>' !  forcing_list
-initConditionFile    'syntheticTestCases/miller1998/common/summa_zInitialCond_millerSand.nc' !  initial_cond
-outFilePrefix        'millerSand' !  output_prefix
+globalHruParamFile   'syntheticTestCases/miller1998/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'syntheticTestCases/miller1998/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'syntheticTestCases/miller1998/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'syntheticTestCases/miller1998/summa_zParamTrial_millerSand.nc' !  para_trial
+forcingListFile      'syntheticTestCases/miller1998/summa_zForcingFileList_<PRECISION>' !  forcing_list
+initConditionFile    'syntheticTestCases/miller1998/summa_zInitialCond_millerSand.nc' !  initial_cond
+outFilePrefix        'millerSand_<PRECISION>' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !
 generalTableFile     'meta/GENPARM.TBL' !

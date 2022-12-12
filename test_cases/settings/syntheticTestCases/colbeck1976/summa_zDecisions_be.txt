@@ -19,10 +19,10 @@ LAI_method                      monTable        ! (09) method used to determine 
 f_Richards                      mixdform        ! (10) form of Richard's equation
 groundwatr                      noXplict        ! (11) choice of groundwater parameterization
 hc_profile                      constant        ! (12) choice of hydraulic conductivity profile
-bcUpprTdyn                      presTemp        ! (13) type of upper boundary condition for thermodynamics
+bcUpprTdyn                      zeroFlux        ! (13) type of upper boundary condition for thermodynamics
 bcLowrTdyn                      zeroFlux        ! (14) type of lower boundary condition for thermodynamics
 bcUpprSoiH                      liq_flux        ! (15) type of upper boundary condition for soil hydrology
-bcLowrSoiH                      zeroFlux        ! (16) type of lower boundary condition for soil hydrology
+bcLowrSoiH                      drainage        ! (16) type of lower boundary condition for soil hydrology
 veg_traits                      CM_QJRMS1988    ! (17) choice of parameterization for vegetation roughness length and displacement height
 canopyEmis                      difTrans        ! (18) choice of parameterization for canopy emissivity
 snowIncept                      lightSnow       ! (19) choice of parameterization for snow interception
@@ -32,11 +32,10 @@ canopySrad                      CLM_2stream     ! (22) choice of canopy shortwav
 alb_method                      varDecay        ! (23) choice of albedo representation
 compaction                      anderson        ! (24) choice of compaction routine
 snowLayers                      jrdn1991        ! (25) choice of method to combine and sub-divide snow layers
-thCondSnow                      jrdn1991        ! (26) choice of thermal conductivity representation for snow
-thCondSoil                      hanssonVZJ      ! (27) choice of thermal conductivity representation for soil
+thCondSnow                      smnv2000        ! (26) choice of thermal conductivity representation for snow
+thCondSoil                      mixConstit      ! (27) choice of thermal conductivity representation for soil
 spatial_gw                      localColumn     ! (28) choice of method for the spatial representation of groundwater
 subRouting                      timeDlay        ! (29) choice of method for sub-grid routing
-howHeatCap                      enthalpyFD      ! (30)
 ! ***********************************************************************************************
 ! ***** description of the options available -- nothing below this point is read ****************
 ! ***********************************************************************************************
@@ -165,4 +164,6 @@ howHeatCap                      enthalpyFD      ! (30)
 ! timeDlay  ! time-delay histogram
 ! qInstant  ! instantaneous routing
 ! ***********************************************************************************************
-! history Mon Jul 20 16:08:18 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./syntheticTestCases/mizoguchi1990/summa_fileManager_mizoguchi.txt
+! history Mon Jul 20 16:08:17 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./syntheticTestCases/colbeck1976/summa_fileManager_colbeck1976-exp1.txt
+! history Mon Jul 20 16:08:17 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./syntheticTestCases/colbeck1976/summa_fileManager_colbeck1976-exp2.txt
+! history Mon Jul 20 16:08:17 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./syntheticTestCases/colbeck1976/summa_fileManager_colbeck1976-exp3.txt
