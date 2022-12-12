@@ -11,7 +11,7 @@ globalHruParamFile   'syntheticTestCases/vanderborght2005/common/summa_zLocalPar
 globalGruParamFile   'syntheticTestCases/vanderborght2005/common/summa_zBasinParamInfo.txt'
 attributeFile        'syntheticTestCases/vanderborght2005/common/summa_zLocalAttributes.nc'
 trialParamFile       'syntheticTestCases/vanderborght2005/common/summa_zParamTrial_vanderborght2005_exp3.nc'
-forcingListFile      'syntheticTestCases/vanderborght2005/common/summa_zForcingFileList.txt'
+forcingListFile      'syntheticTestCases/vanderborght2005/common/summa_zForcingFileList_<PRECISION>'
 initConditionFile    'syntheticTestCases/vanderborght2005/common/summa_zInitialCond.nc'
 outFilePrefix        'vanderborght2005_exp3'
 vegTableFile         'meta/VEGPARM.TBL'

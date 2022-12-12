@@ -11,7 +11,7 @@ globalHruParamFile   'syntheticTestCases/mizoguchi1990/common/summa_zLocalParamI
 globalGruParamFile   'syntheticTestCases/mizoguchi1990/common/summa_zBasinParamInfo.txt'
 attributeFile        'syntheticTestCases/mizoguchi1990/common/summa_zLocalAttributes.nc'
 trialParamFile       'syntheticTestCases/mizoguchi1990/common/summa_zParamTrial.nc'
-forcingListFile      'syntheticTestCases/mizoguchi1990/common/summa_zForcingFileList.txt'
+forcingListFile      'syntheticTestCases/mizoguchi1990/common/summa_zForcingFileList_<PRECISION>'
 initConditionFile    'syntheticTestCases/mizoguchi1990/common/summa_zInitialCond.nc'
 outFilePrefix        'mizoguchi1990'
 vegTableFile         'meta/VEGPARM.TBL'

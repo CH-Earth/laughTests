@@ -11,7 +11,7 @@ globalHruParamFile   'syntheticTestCases/celia1990/common/summa_zLocalParamInfo.
 globalGruParamFile   'syntheticTestCases/celia1990/common/summa_zBasinParamInfo.txt'
 attributeFile        'syntheticTestCases/celia1990/common/summa_zLocalAttributes.nc'
 trialParamFile       'syntheticTestCases/celia1990/common/summa_zParamTrial.nc'
-forcingListFile      'syntheticTestCases/celia1990/common/summa_zForcingFileList.txt'
+forcingListFile      'syntheticTestCases/celia1990/common/summa_zForcingFileList_<PRECISION>'
 initConditionFile    'syntheticTestCases/celia1990/common/summa_zInitialCond.nc'
 outFilePrefix        'celia1990'
 vegTableFile         'meta/VEGPARM.TBL'

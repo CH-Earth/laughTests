@@ -22,9 +22,32 @@ def cleanOutputDirs(test_cases):
         if os.path.exists(path):
             os.rmdir(path)
 
+def setupBE(test_cases, precision, summa_dir):
+    settings_dir = "./test_cases/settings/syntheticTestCases/"
 
+    for dir in test_cases:
+        path = os.path.join(settings_dir, dir)
+        
+        if os.path.exists(path):
+            print("Setting up " + dir)
+            file_managers = os.path.join(path, "fileManagers")
+            if precision == "single":
+                precision = "single_precision.txt"
+            else:
+                precision = "double_precision.txt"
+            for file_manager in os.listdir(file_managers):
+                
+                with open(file_manager, 'r') as f:
+                    data = f.read()
+                    data = data.replace('<BASEDIR>', summa_dir)
+                    data = data.replace('<PRECISION>', precision)
+                
+                with open(file_manager, 'w') as f:
+                    f.write(data)
 
-syntheticTestCases = ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"]
+                
+
+syntheticTestCases = ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005"]
 wrrPaperTestCases = ["figure01", "figure02", "figure03", "figure05", "figure06", "figure07", "figure08", "figure09"]
 
 args = sys.argv
@@ -35,11 +58,14 @@ if args[1] == "clean":
     cleanOutputDirs()
 elif args[1] == "init":
     initOutputDirs(syntheticTestCases)
-else:
-    print("Usage: python init_tests.py [init,clean]")
+
+if args[1] == "be" and args[2] == "single":
+    setupBE(syntheticTestCases, "single")
+
+if args[1] == "be" and args[2] == "double":
+    setupBE(syntheticTestCases, "double", args[3])
 
 
-convertToFloat(syntheticTestCases)
 # initOutputDirs(syntheticTestCases)
 # initOutputDirs(wrrPaperTestCases)
 

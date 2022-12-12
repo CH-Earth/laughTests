@@ -11,7 +11,7 @@ globalHruParamFile   'syntheticTestCases/miller1998/common/summa_zLocalParamInfo
 globalGruParamFile   'syntheticTestCases/miller1998/common/summa_zBasinParamInfo.txt' !  basin_par
 attributeFile        'syntheticTestCases/miller1998/common/summa_zLocalAttributes.nc' !  local_attr
 trialParamFile       'syntheticTestCases/miller1998/common/summa_zParamTrial_millerSand.nc' !  para_trial
-forcingListFile      'syntheticTestCases/miller1998/common/summa_zForcingFileList.txt' !  forcing_list
+forcingListFile      'syntheticTestCases/miller1998/common/summa_zForcingFileList_<PRECISION>' !  forcing_list
 initConditionFile    'syntheticTestCases/miller1998/common/summa_zInitialCond_millerSand.nc' !  initial_cond
 outFilePrefix        'millerSand' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
