@@ -1,12 +1,10 @@
 # Laugh-Tests
 Testing Framework for SUMMA
 
-Included is a `init_tests.py` that controls the testing framework. This includes setting up the directories and running the tests. There is also tests included to verify the output of the tests.
+Included is a `laugh_test.py` python program that controls the testing framework. This includes setting up the directories and running the tests. There is also tests included to verify the output of the tests.
 
+## Installing the Laugh-Tests
 
-
-
-We include some verification data to check the results of SUMMA simulations after changes to the code are made. This testing frameworks can also be used to compare two versions SUMMA together. Some python scripts for comparing the output of SUMMA are provided in the `post_scripts/` directory.
 
 ## Installing the Laugh-Tests
 To install the laugh tests, clone this git repo into the top level of your summa project. This is the directory that contains `bin/` and `build/`.
