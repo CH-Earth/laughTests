@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # create the paths for the output files
+
+
+
 mkdir -p test_cases/output/actors/celia1990
 mkdir -p test_cases/output/non_actors/celia1990
 
