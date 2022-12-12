@@ -1,5 +1,7 @@
 import os
 import sys
+import subprocess
+import xarray as xr
 
 
 def initOutputDirs(test_cases):
@@ -22,6 +24,8 @@ def cleanOutputDirs(test_cases):
 
 
 
+syntheticTestCases = ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"]
+wrrPaperTestCases = ["figure01", "figure02", "figure03", "figure05", "figure06", "figure07", "figure08", "figure09"]
 
 args = sys.argv
 if len(args) < 2:
@@ -30,16 +34,14 @@ if len(args) < 2:
 if args[1] == "clean":
     cleanOutputDirs()
 elif args[1] == "init":
-    initOutputDirs()
+    initOutputDirs(syntheticTestCases)
 else:
     print("Usage: python init_tests.py [init,clean]")
 
-syntheticTestCases = ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"]
 
-wrrPaperTestCases = ["figure01", "figure02", "figure03", "figure05", "figure06", "figure07", "figure08", "figure09"]
+convertToFloat(syntheticTestCases)
+# initOutputDirs(syntheticTestCases)
+# initOutputDirs(wrrPaperTestCases)
 
-initOutputDirs(syntheticTestCases)
-initOutputDirs(wrrPaperTestCases)
-
-cleanOutputDirs(syntheticTestCases)
-cleanOutputDirs(wrrPaperTestCases)
+# cleanOutputDirs(syntheticTestCases)
+# cleanOutputDirs(wrrPaperTestCases)
