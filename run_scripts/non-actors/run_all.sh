@@ -38,4 +38,3 @@ echo ""
 # Senator
 echo "Starting Senator"
 ./run_senator.sh
-echo ""
