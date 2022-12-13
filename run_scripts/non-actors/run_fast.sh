@@ -23,4 +23,3 @@ echo ""
 # Umpqua
 echo "Starting Umpqua"
 ./run_umpqua.sh
-echo "
