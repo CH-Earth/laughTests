@@ -1,7 +1,6 @@
 import os
 import sys
 import subprocess
-import xarray as xr
 import json
 
 """
@@ -101,16 +100,16 @@ with open("test_settings.json", "r") as test_settings_file:
     solver = test_settings["Solver"]
     summa_exe = test_settings["Summa_Exe"]
 
-if len(args) < 2:
-    if args[1] == "init":
+if len(sys.argv) < 2:
+    if sys.argv[1] == "init":
         initOutputDirs(test_cases)
         setupBE(test_cases, precision, solver)
-    elif args[1] == "clean":
+    elif sys.argv[1] == "clean":
         cleanOutputDirs(test_cases)
         cleanFileManagers(test_cases)
-    elif args[1] == "reset":
+    elif sys.argv[1] == "reset":
         cleanFileManagers(test_cases)
-    elif args[1] == "run":
+    elif sys.argv[1] == "run":
         runTest(test_cases)
     else:
         print("Invalid argument")
