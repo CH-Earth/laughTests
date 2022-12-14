@@ -100,7 +100,7 @@ with open("test_settings.json", "r") as test_settings_file:
     solver = test_settings["Solver"]
     summa_exe = test_settings["Summa_Exe"]
 
-if len(sys.argv) < 2:
+if len(sys.argv) == 2:
     if sys.argv[1] == "init":
         initOutputDirs(test_cases)
         setupBE(test_cases, precision, solver)
@@ -111,6 +111,6 @@ if len(sys.argv) < 2:
         cleanFileManagers(test_cases)
     elif sys.argv[1] == "run":
         runTest(test_cases)
-    else:
-        print("Invalid argument")
-        print("Valid arguments are: init, run, reset, clean")
+else:
+    print("Invalid argument")
+    print("Valid arguments are: init, run, reset, clean")
