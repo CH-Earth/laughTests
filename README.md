@@ -9,28 +9,33 @@ To get a copy of the laugh tests, simply clone the repo to your system you wish 
 ## Running the Laugh-Tests
 To run the laugh tests first you must install and compile SUMMA. This can be done with the documentation found here https://summa.readthedocs.io/en/latest/SUMMA_documentation/.
 
-Once you have installed summa you can now set up the laugh tests. The laugh tests have a few settings that need to be configured before running them. The configuration is done through the `test_settings.json` file. Here their are options for specifying a list of tests to run, the precision of forcing data to use, the solver, and the path to the SUMMA executable. All fields need to be specified. Detailed explanations are below:
+Once you have installed summa you can now set up the laugh tests. The laugh tests are configured through the `test_settings.json` file included in the laugh_test repository. This file will need to be modified to work in your envrionment and to run the specific tests you desire. The settings are configured by the user by modifing the value of the key-value pairs in the `test_settings.json` file. Detailed explenations of the key-value pairs are provided below:
 
  - Test_List: This is a the list of test you wish to run. The directories and file manager files will automatically be set up by running the `laugh_test.py` file which instructions can be found in the `laugh_test.py` section below
+    - Example: "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"]
 
  - Precision: Either use "single" or "double". This specifies what precision of forcing data to use for the laugh tests.
+    - Example: "Precision": "single",
 
  - Solver: Either use "be" or "sundials". This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
+    - Example: "Solver": "be",
 
  - Summa_exe: Provide a full path to the summa executable that you compiled.
+    - "Summa_Exe": "/absolute/path/to/summa.exe"
 
-## Using `laugh_tests.py`
-Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laugh_tests.py` file. You run it with the following `python3 laugh_tests.py [options]`. Below is a list of options:
+### Using `laugh_tests.py`
+Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laugh_tests.py` file. You run it with the following `python3 laugh_tests.py [options]`. Below are a list of options:
 - init
 - run
 - reset
 - clean
 
-The first command to use is `python3 laugh_tests.py inti`. This will set up all of the output directories and the file managers. After running init the next command to run is `python3 laugh_tests.py run`. This will run all of the tests that you specified in the Test_List in the `test_settings.json` file.
+The first command to use is `python3 laugh_tests.py init`. This will set up all of the output directories and the file managers. After running init the next command to run is `python3 laugh_tests.py run`. This will run all of the tests that you specified in the Test_List key in the `test_settings.json` file.
 
 If you plan to run more tests with multiple configurations use the `reset` option followed by `init` again. If you wish to delete everything including your generated output use `clean`
 
 ### EXAMPLE TEST_SETTINGS.json
+```json
 {
     "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"],
     
@@ -38,8 +43,9 @@ If you plan to run more tests with multiple configurations use the `reset` optio
     
     "Solver": "be",
 
-    "Summa_Exe": "/globalhome/kck540/HPC/Summa-Projects/Summa-Actors/build/summa/bin/summa.exe"
+    "Summa_Exe": "/absolute/path/to/summa.exe"
 }
+```
 
 
 
