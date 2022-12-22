@@ -5,35 +5,35 @@
 
 case $TEST in
     celia1990)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_celia1990_test.txt > $OUTPUT_PATH/celia.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_celia1990_test.txt > $OUTPUT_PATH/celia.txt
         ;;
     colbeck1976)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_colbeck1976-exp1_test.txt > $OUTPUT_PATH/colbeck_1.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_colbeck1976-exp1_test.txt > $OUTPUT_PATH/summa_colbeck_1.txt
         echo "Colbeck 1 Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_colbeck1976-exp2_test.txt > $OUTPUT_PATH/colbeck_2.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_colbeck1976-exp2_test.txt > $OUTPUT_PATH/summa_colbeck_2.txt
         echo "Colbeck 2 Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_colbeck1976-exp3_test.txt > $OUTPUT_PATH/colbeck_3.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_colbeck1976-exp3_test.txt > $OUTPUT_PATH/summa_colbeck_3.txt
         echo "Colbeck 3 Finished"
         ;;
     miller1998)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_millerClay_test.txt > $OUTPUT_PATH/miller_clay.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_millerClay_test.txt > $OUTPUT_PATH/summa_miller_clay.txt
         echo "Miller Clay Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_millerLoam_test.txt > $OUTPUT_PATH/miller_loam.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_millerLoam_test.txt > $OUTPUT_PATH/summa_miller_loam.txt
         echo "Miller Loam Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_millerSand_test.txt > $OUTPUT_PATH/miller_sand.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_millerSand_test.txt > $OUTPUT_PATH/summa_miller_sand.txt
         echo "Miller Sand Finished"
         ;;
 
     mizoguchi1990)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/summa_fileManager_mizoguchi1990_test.txt > $OUTPUT_PATH/mizoguchi.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_mizoguchi_test.txt > $OUTPUT_PATH/summa_mizoguchi.txt
         ;;
 
     vanderborght2005)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH//summa_fileManager_vanderborght2005_exp1_test.txt > $OUTPUT_PATH//vanderborght_1.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_vanderborght2005-exp1_test.txt > $OUTPUT_PATH/summa_vanderborght_1.txt
         echo "Vanderborght 1 Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH//summa_fileManager_vanderborght2005_exp2_test.txt > $OUTPUT_PATH//vanderborght_2.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_vanderborght2005-exp2_test.txt > $OUTPUT_PATH/summa_vanderborght_2.txt
         echo "Vanderborght 2 Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH//summa_fileManager_vanderborght2005_exp3_test.txt > $OUTPUT_PATH//vanderborght_3.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_vanderborght2005-exp3_test.txt > $OUTPUT_PATH/summa_vanderborght_3.txt
         echo "Vanderborght 3 Finished"
         ;;
 esac

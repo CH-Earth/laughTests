@@ -78,17 +78,36 @@ def get_output_vars(model_output_file):
 
 
 
-num_hru = 100
-celia_non_actors = "/scratch/gwf/gwf_cmt/kck540/Summa-Actors/netcdf/SummaOriginal_G000601-000700_timestep.nc"
-celia_actors = "/scratch/gwf/gwf_cmt/kck540/Summa-Actors/netcdf/Summa-ActorsGRU601-100_timestep.nc"
-
-model_output_file = "/project/gwf/gwf_cmt/kck540/domain_NorthAmerica/summa_actors_input/outputControl.txt"
-
+num_hru = 1
+model_output_file = "/Summa-Actors/laugh_tests/test_cases/settings/meta/Model_Output.txt"
+celia_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/celia1990/summa_celia1990_double_precision_G1-1_timestep.nc"
+celia_actors = "/Summa-Actors/laugh_tests/test_cases/output/celia1990/summaActors_celia1990_double_precisionGRU1-1_timestep.nc"
 output_vars = get_output_vars(model_output_file)
-total_errors = verify_data(celia_non_actors, celia_actors, num_hru, output_vars)
+total_errors_celia = verify_data(celia_non_actors, celia_actors, num_hru, output_vars)
 print()
+
+model_output_file = "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/colbeck1976/summa_defineModelOutput.txt"
+output_vars = get_output_vars(model_output_file)
+
+colbeck1_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summa_colbeck1976-exp1_double_precision_G1-1_timestep.nc"
+colbeck1_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summaActors_colbeck1976-exp1_double_precisionGRU1-1_timestep.nc"
+total_errors_colbeck1 = verify_data(colbeck1_non_actors, colbeck1_actors, num_hru, output_vars)
+
+colbeck2_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summa_colbeck1976-exp2_double_precision_G1-1_timestep.nc"
+colbeck2_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summaActors_colbeck1976-exp2_double_precisionGRU1-1_timestep.nc"
+total_errors_colbeck2 = verify_data(colbeck2_non_actors, colbeck2_actors, num_hru, output_vars)
+
+colbeck3_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summa_colbeck1976-exp3_double_precision_G1-1_timestep.nc"
+colbeck3_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summaActors_colbeck1976-exp3_double_precisionGRU1-1_timestep.nc"
+total_errors_colbeck3 = verify_data(colbeck3_non_actors, colbeck3_actors, num_hru, output_vars)
+
+
 
 print()
 print("Finished Checking Output")
-print("     Total Errors = ", total_errors)
+print("     Total Errors Celia = ", total_errors_celia)
+print("     Total Errors Colbeck1 = ", total_errors_colbeck1)
+print("     Total Errors Colbeck2 = ", total_errors_colbeck2)
+print("     Total Errors Colbeck3 = ", total_errors_colbeck3)
+
 

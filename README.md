@@ -23,6 +23,9 @@ Once you have installed summa you can now set up the laugh tests. The laugh test
  - Summa_exe: Provide a full path to the summa executable that you compiled.
     - "Summa_Exe": "/absolute/path/to/summa.exe"
 
+ - Version: actors or non-actors versions of the programs, they have some differences in setting up
+    - "Version": "actors"
+
 ### Using `laugh_tests.py`
 Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laugh_tests.py` file. You run it with the following `python3 laugh_tests.py [options]`. Below are a list of options:
 - init
