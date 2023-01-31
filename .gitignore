@@ -44,3 +44,6 @@ test_cases/settings/wrrPaperTestCases/senator_alb_method/non_actors/*test.txt
 test_cases/settings/wrrPaperTestCases/umpqua_snowIncept/actors/*test.txt
 test_cases/settings/wrrPaperTestCases/umpqua_snowIncept/non_actors/*test.txt
 
+test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/*test.txt
+test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/*test.txt
+test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/*test.txt

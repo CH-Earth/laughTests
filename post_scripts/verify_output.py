@@ -101,6 +101,26 @@ colbeck3_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/s
 colbeck3_actors = "/Summa-Actors/laugh_tests/test_cases/output/colbeck1976/summaActors_colbeck1976-exp3_double_precisionGRU1-1_timestep.nc"
 total_errors_colbeck3 = verify_data(colbeck3_non_actors, colbeck3_actors, num_hru, output_vars)
 
+model_output_file = "/Summa-Actors/laugh_tests/test_cases/settings/meta/Model_Output.txt"
+output_vars = get_output_vars(model_output_file)
+mizoguchi_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/mizoguchi1990/summa_mizoguchi1990_double_precision_G1-1_timestep.nc"
+mizoguchi_actors = "/Summa-Actors/laugh_tests/test_cases/output/mizoguchi1990/summaActors_mizoguchi1990_double_precisionGRU1-1_timestep.nc"
+total_errors_mizoguchi = verify_data(mizoguchi_non_actors, mizoguchi_actors, num_hru, output_vars)
+
+model_output_file = "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
+output_vars = get_output_vars(model_output_file)
+vanderborght1_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/vanderborght2005/summa_vanderborght2005_exp1_double_precision_G1-1_timestep.nc"
+vanderborght1_actors = "/Summa-Actors/laugh_tests/test_cases/output/vanderborght2005/summaActors_vanderborght2005_exp1_double_precisionGRU1-1_timestep.nc"
+total_errors_vanderborght1 = verify_data(vanderborght1_non_actors, vanderborght1_actors, num_hru, output_vars)
+
+vanderborght2_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/vanderborght2005/summa_vanderborght2005_exp2_double_precision_G1-1_timestep.nc"
+vanderborght2_actors = "/Summa-Actors/laugh_tests/test_cases/output/vanderborght2005/summaActors_vanderborght2005_exp2_double_precisionGRU1-1_timestep.nc"
+total_errors_vanderborght2 = verify_data(vanderborght2_non_actors, vanderborght2_actors, num_hru, output_vars)
+
+vanderborght3_non_actors = "/Summa-Actors/laugh_tests/test_cases/output/vanderborght2005/summa_vanderborght2005_exp3_double_precision_G1-1_timestep.nc"
+vanderborght3_actors = "/Summa-Actors/laugh_tests/test_cases/output/vanderborght2005/summaActors_vanderborght2005_exp3_double_precisionGRU1-1_timestep.nc"
+total_errors_vanderborght3 = verify_data(vanderborght3_non_actors, vanderborght3_actors, num_hru, output_vars)
+
 
 
 print()
@@ -109,5 +129,9 @@ print("     Total Errors Celia = ", total_errors_celia)
 print("     Total Errors Colbeck1 = ", total_errors_colbeck1)
 print("     Total Errors Colbeck2 = ", total_errors_colbeck2)
 print("     Total Errors Colbeck3 = ", total_errors_colbeck3)
+print("     Total Errors Mizoguchi = ", total_errors_mizoguchi)
+print("     Total Errors Vanderborght1 = ", total_errors_vanderborght1)
+print("     Total Errors Vanderborght2 = ", total_errors_vanderborght2)
+print("     Total Errors Vanderborght3 = ", total_errors_vanderborght3)
 
 

@@ -35,6 +35,3 @@ basin__AquiferBaseflow    | 1
 basin__AquiferTranspire   | 1
 averageInstantRunoff      | 1
 averageRoutedRunoff       | 1
-fieldCapacity             | 1
-scalarLAI                 | 1
-scalarSAI                 | 1
