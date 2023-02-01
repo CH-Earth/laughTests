@@ -25,7 +25,7 @@ case $TEST in
         ;;
 
     mizoguchi1990)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_mizoguchi_test.txt > $OUTPUT_PATH/summa_mizoguchi.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_mizoguchi1990_test.txt > $OUTPUT_PATH/summa_mizoguchi.txt
         ;;
 
     vanderborght2005)

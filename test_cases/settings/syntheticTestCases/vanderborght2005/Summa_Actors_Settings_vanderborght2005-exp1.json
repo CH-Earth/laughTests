@@ -14,7 +14,7 @@
         "num_timesteps_in_output_buffer": 1
     },
     "Job_Actor": {
-        "file_manager_path": "/Summa-Actors/laugh_tests/test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/fileManager_vanderborght2005-exp1_test.txt",
+        "file_manager_path": "/Summa-Projects/laugh_tests/test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/fileManager_vanderborght2005-exp1_test.txt",
         "output_csv": false,
         "csv_path": "/scratch/kck540/Summa_Distributed_Failure_Case/csv"
     },
