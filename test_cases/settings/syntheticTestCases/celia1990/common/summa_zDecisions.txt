@@ -63,8 +63,9 @@ howHeatCap                      enthalpyFD      ! (30)
 ! Jarvis    ! Jarvis
 ! -----------------------------------------------------------------------------------------------
 ! (07) choice of numerical method
-! be_numrec    ! home-grown backward Euler
-! sundials  ! SUNDIALS solver
+! be_numrec ! home-grown backward Euler
+! be_kinsol ! SUNDIALS backward Euler solution using Kinsol
+! sundials  ! SUNDIALS solution using IDA
 ! -----------------------------------------------------------------------------------------------
 ! (08) method used to calculate flux derivatives
 ! numericl  ! numerical derivatives
