@@ -36,7 +36,7 @@ thCondSnow                      jrdn1991        ! (26) choice of thermal conduct
 thCondSoil                      mixConstit      ! (27) choice of thermal conductivity representation for soil
 spatial_gw                      localColumn     ! (28) choice of method for the spatial representation of groundwater
 subRouting                      timeDlay        ! (29) choice of method for sub-grid routing
-howHeatCap                      enthalpyFD      ! (30)
+howHeatCap                      closedForm      ! (30)
 ! ***********************************************************************************************
 ! ***** description of the options available -- nothing below this point is read ****************
 ! ***********************************************************************************************
@@ -63,8 +63,9 @@ howHeatCap                      enthalpyFD      ! (30)
 ! Jarvis    ! Jarvis
 ! -----------------------------------------------------------------------------------------------
 ! (07) choice of numerical method
-! bEuler    ! home-grown backward Euler
-! sundials  ! SUNDIALS solver
+! be_numrec ! home-grown backward Euler
+! be_kinsol ! SUNDIALS backward Euler solution using Kinsol
+! sundials  ! SUNDIALS solution using IDA
 ! -----------------------------------------------------------------------------------------------
 ! (08) method used to calculate flux derivatives
 ! numericl  ! numerical derivatives
