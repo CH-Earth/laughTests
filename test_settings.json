@@ -1,0 +1,11 @@
+{
+    "Test_List": ["celia1990", "colbeck1976", "mizoguchi1990", "vanderborght2005"],
+    
+    "Precision": "double",
+    
+    "Solver": "be",
+
+    "Summa_Exe": "/Summa-Projects/Summa-Actors/build/summa/bin/summa.exe",
+
+    "Version": "non-actors"
+}

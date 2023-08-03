@@ -6,72 +6,63 @@ import numpy as np
 
 
 def verify_data(verified_data, compare_data, num_hru, output_variables):
-    try:
-        verified_dataset = xr.open_dataset(verified_data)
-        to_compare_dataset = xr.open_dataset(compare_data)
-    except FileNotFoundError:
-        print("Check the variables \'verified_data\' and \'compare_data\'. They may not point to the correct output files or the output filenames may have changed.")
-        print("Verified_path =", verified_data)
-        print("Compare_path =", compare_data)
-        exit()
+    verified_dataset = xr.open_dataset(verified_data)
+    to_compare_dataset = xr.open_dataset(compare_data)
     total_errors = 0
     for i_hru in range(0, num_hru):
+        print("Checking HRU ", i_hru, " of ", num_hru, " for errors")
         verified_hru = verified_dataset.isel(hru=i_hru).copy()
         hru_to_compare = to_compare_dataset.isel(hru=i_hru).copy()
         for var in output_variables:
             error_counter = 0
-            try:
-                if len(verified_hru[var].values) != len(hru_to_compare[var].values):
-                    print("ERROR: output variable", var, "does not contain the same amount of data")
-                    print("     verified_hru = ", len(verified_hru[var].values))
-                    print("     hru_to_compare = ", len(hru_to_compare[var].values))
             
-                verified_data_list = []
-                to_verify_data = []
-                if (verified_hru[var].values.ndim > 1):
-                    # 2D output case
-                    for list in verified_hru[var].values:
-                        for data in list:
-                            verified_data_list.append(data)
-                    
-                    for list in hru_to_compare[var].values:
-                        for data in list:
-                            to_verify_data.append(data)
-                else:
-                    # 1D output case
-                    for data in verified_hru[var].values:
-                        verified_data_list.append(data)
-                    
-                    for data in hru_to_compare[var].values:
-                        to_verify_data.append(data)
-
-                                    
-                # check length
-                if len(verified_data_list) != len(to_verify_data):
-                    print("ERROR: output variable", var, "does not contain the same amount of data")
-                    print("     verified_hru = ", len(verified_data_list))
-                    print("     hru_to_compare = ", len(to_verify_data))
-
-                # check values
-                for elem in range(0, len(verified_data_list)):
-                    if abs(verified_data_list[elem] - to_verify_data[elem]) != 0:
-                        # print("variable -",var, "has different values at", elem)
-                        # print("     verified_hru = ", verified_data[elem])
-                        # print("     hru_to_compare = ", to_verify_data[elem])
-                        error_counter += 1
-                
-                print("    Var", var, "has", error_counter, "errors")
-                total_errors += error_counter
-                        
-            except (TypeError, KeyError) as error:
-                print(error)
-                # print("variable - ", var, "Cannot be compared with len")
-                # print("     verified_hru = ",verified_hru[var].values)
-                # print("     hru_to_compare = ", hru_to_compare[var].values)
+            if len(verified_hru[var].values) != len(hru_to_compare[var].values):
+                print("ERROR: output variable", var, "does not contain the same amount of data")
+                print("     verified_hru = ", len(verified_hru[var].values))
+                print("     hru_to_compare = ", len(hru_to_compare[var].values))
+    
         
-        return total_errors
+            verified_data_list = []
+            to_verify_data = []
+            if (verified_hru[var].values.ndim > 1):
+                # 2D output case
+                for list in verified_hru[var].values:
+                    for data in list:
+                        verified_data_list.append(data)
+                
+                for list in hru_to_compare[var].values:
+                    for data in list:
+                        to_verify_data.append(data)
+            else:
+                # 1D output case
+                for data in verified_hru[var].values:
+                    verified_data_list.append(data)
+                
+                for data in hru_to_compare[var].values:
+                    to_verify_data.append(data)
+
+                                
+            # check length
+            if len(to_verify_data) != len(to_verify_data):
+                print("ERROR: output variable", var, "does not contain the same amount of data")
+                print("     verified_hru = ", len(verified_data_list))
+                print("     hru_to_compare = ", len(to_verify_data))
+
+            # check values
+            for elem in range(0, len(verified_data_list)):
+                if abs(verified_data_list[elem] - to_verify_data[elem]) != 0:
+                    error_counter += 1
+            
+            print("    Var", var, "has", error_counter, "errors")
+            total_errors += error_counter
+                
+        
+    return total_errors
 
 
+"""
+    This script is used to verify the output variables of the model.
+"""
 def get_output_vars(model_output_file):
     model_output_vars = []
     open_file = open(model_output_file, "r")
@@ -88,100 +79,57 @@ def get_output_vars(model_output_file):
 
 
 num_hru = 1
-actors_output_path = "/Summa-Actors/laugh_tests/test_cases/output/actors"
-non_actors_output_path = "/SUMMA/laugh_tests/test_cases/output/non_actors"
-verification_dir_path = "../validation_data/m2_mac_Sept23"
+model_output_file = "../test_cases/settings/meta/Model_Output.txt"
+celia_non_actors = "../test_cases/output/celia1990/summa_celia1990_double_precision_G1-1_timestep.nc"
+celia_actors = "../test_cases/output/celia1990/summaActors_celia1990_double_precisionGRU1-1_timestep.nc"
+output_vars = get_output_vars(model_output_file)
+total_errors_celia = verify_data(celia_non_actors, celia_actors, num_hru, output_vars)
 
+model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/summa_defineModelOutput.txt"
+output_vars = get_output_vars(model_output_file)
+colbeck1_non_actors = "../test_cases/output/colbeck1976/summa_colbeck1976-exp1_double_precision_G1-1_timestep.nc"
+colbeck1_actors = "../test_cases/output/colbeck1976/summaActors_colbeck1976-exp1_double_precisionGRU1-1_timestep.nc"
+total_errors_colbeck1 = verify_data(colbeck1_non_actors, colbeck1_actors, num_hru, output_vars)
 
-print("Checking Celia")
-celia_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
-celia_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/celia1990/celia1990GRU1-1_timestep.nc"
+colbeck2_non_actors = "../test_cases/output/colbeck1976/summa_colbeck1976-exp2_double_precision_G1-1_timestep.nc"
+colbeck2_actors = "../test_cases/output/colbeck1976/summaActors_colbeck1976-exp2_double_precisionGRU1-1_timestep.nc"
+total_errors_colbeck2 = verify_data(colbeck2_non_actors, colbeck2_actors, num_hru, output_vars)
+
+colbeck3_non_actors = "../test_cases/output/colbeck1976/summa_colbeck1976-exp3_double_precision_G1-1_timestep.nc"
+colbeck3_actors = "../test_cases/output/colbeck1976/summaActors_colbeck1976-exp3_double_precisionGRU1-1_timestep.nc"
+total_errors_colbeck3 = verify_data(colbeck3_non_actors, colbeck3_actors, num_hru, output_vars)
 
 model_output_file = "../test_cases/settings/meta/Model_Output.txt"
-
 output_vars = get_output_vars(model_output_file)
-celia_errors = verify_data(celia_non_actors, celia_actors, num_hru, output_vars)
-print()
+mizoguchi_non_actors = "../test_cases/output/mizoguchi1990/summa_mizoguchi1990_double_precision_G1-1_timestep.nc"
+mizoguchi_actors = "../test_cases/output/mizoguchi1990/summaActors_mizoguchi1990_double_precisionGRU1-1_timestep.nc"
+total_errors_mizoguchi = verify_data(mizoguchi_non_actors, mizoguchi_actors, num_hru, output_vars)
 
-
-print("Checking Colbeck_1")
-colbeck_1_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
-colbeck_1_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp1GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
+model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/Model_Output.txt"
 output_vars = get_output_vars(model_output_file)
-colbeck_1_errors = verify_data(colbeck_1_non_actors, colbeck_1_actors, num_hru, output_vars)
-print()
+vanderborght1_non_actors = "../test_cases/output/vanderborght2005/summa_vanderborght2005_exp1_double_precision_G1-1_timestep.nc"
+vanderborght1_actors = "../test_cases/output/vanderborght2005/summaActors_vanderborght2005_exp1_double_precisionGRU1-1_timestep.nc"
+total_errors_vanderborght1 = verify_data(vanderborght1_non_actors, vanderborght1_actors, num_hru, output_vars)
+
+vanderborght2_non_actors = "../test_cases/output/vanderborght2005/summa_vanderborght2005_exp2_double_precision_G1-1_timestep.nc"
+vanderborght2_actors = "../test_cases/output/vanderborght2005/summaActors_vanderborght2005_exp2_double_precisionGRU1-1_timestep.nc"
+total_errors_vanderborght2 = verify_data(vanderborght2_non_actors, vanderborght2_actors, num_hru, output_vars)
+
+vanderborght3_non_actors = "../test_cases/output/vanderborght2005/summa_vanderborght2005_exp3_double_precision_G1-1_timestep.nc"
+vanderborght3_actors = "../test_cases/output/vanderborght2005/summaActors_vanderborght2005_exp3_double_precisionGRU1-1_timestep.nc"
+total_errors_vanderborght3 = verify_data(vanderborght3_non_actors, vanderborght3_actors, num_hru, output_vars)
 
 
-print("Checking Colbeck_2")
-colbeck_2_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
-colbeck_2_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp2GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
-output_vars = get_output_vars(model_output_file)
-colbeck_2_errors = verify_data(colbeck_2_non_actors, colbeck_2_actors, num_hru, output_vars)
-print()
 
-
-print("Checking Colbeck_3")
-colbeck_3_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
-colbeck_3_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/colbeck1976/colbeck1976-exp3GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/syntheticTestCases/colbeck1976/common/summa_defineModelOutput.txt"
-output_vars = get_output_vars(model_output_file)
-colbeck_3_errors = verify_data(colbeck_3_non_actors, colbeck_3_actors, num_hru, output_vars)
-print()
-
-
-# print("Checking Miller_loam")
-# miller_loam_non_actors = "/SUMMA/laugh_tests/test_cases/output/non_actors/miller1998/millerLoam_G1-1_timestep.nc"
-# miller_loam_actors = "/Summa-Actors/laugh_tests/test_cases/output/actors/miller1998/millerLoamGRU1-1_timestep.nc"
-# model_output_file = "../test_cases/settings/meta/Model_Output.txt"
-# output_vars = get_output_vars(model_output_file)
-# miller_errors = verify_data(miller_loam_non_actors, miller_loam_actors, num_hru, output_vars)
-# print()
-
-
-print("Checking Mizoguchi")
-mizoguchi_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/mizoguchi1990/mizoguchi1990GRU1-1_timestep.nc"
-mizoguchi_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/mizoguchi1990/mizoguchi1990GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/meta/Model_Output.txt"
-output_vars = get_output_vars(model_output_file)
-mizoguchi_errors = verify_data(mizoguchi_non_actors, mizoguchi_actors, num_hru, output_vars)
-print()
-
-
-print("Checking Vanderborght_1")
-vanderborght_1_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp1GRU1-1_timestep.nc"
-vanderborght_1_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp1GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
-output_vars = get_output_vars(model_output_file)
-vanderborght_1_erros = verify_data(vanderborght_1_non_actors, vanderborght_1_actors, num_hru, output_vars)
-print()
-
-
-print("Checking Vanderborght_2")
-vanderborght_2_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp2GRU1-1_timestep.nc"
-vanderborght_2_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp2GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
-output_vars = get_output_vars(model_output_file)
-vanderborght_2_erros = verify_data(vanderborght_2_non_actors, vanderborght_2_actors, num_hru, output_vars)
-print()
-
-
-print("Checking Vanderborght_3")
-vanderborght_3_non_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp3GRU1-1_timestep.nc"
-vanderborght_3_actors = "/Users/kyleklenk/SUMMA-Projects/Summa-Actors-Test/Summa-Actors/laugh_tests/test_cases/output/actors/vanderborght2005/vanderborght2005_exp3GRU1-1_timestep.nc"
-model_output_file = "../test_cases/settings/syntheticTestCases/vanderborght2005/common/Model_Output.txt"
-output_vars = get_output_vars(model_output_file)
-vanderborght_3_erros = verify_data(vanderborght_3_non_actors, vanderborght_3_actors, num_hru, output_vars)
 print()
 print("Finished Checking Output")
-print("     Total Errors For Celia", celia_errors)
-print("     Total Errors For Colbeck_1", colbeck_1_errors)
-print("     Total Errors For Colbeck_2", colbeck_2_errors)
-print("     Total Errors For Colbeck_3", colbeck_3_errors)
-# print("     Total Errors For Miller_Loam", miller_errors)
-print("     Total Errors For Mizoguchi", mizoguchi_errors)
-print("     Total Errors For Vanderborght", vanderborght_1_erros)
-print("     Total Errors For Vanderborght", vanderborght_2_erros)
-print("     Total Errors For Vanderborght", vanderborght_3_erros)
+print("     Total Errors Celia = ", total_errors_celia)
+print("     Total Errors Colbeck1 = ", total_errors_colbeck1)
+print("     Total Errors Colbeck2 = ", total_errors_colbeck2)
+print("     Total Errors Colbeck3 = ", total_errors_colbeck3)
+# print("     Total Errors Mizoguchi = ", total_errors_mizoguchi)
+print("     Total Errors Vanderborght1 = ", total_errors_vanderborght1)
+print("     Total Errors Vanderborght2 = ", total_errors_vanderborght2)
+print("     Total Errors Vanderborght3 = ", total_errors_vanderborght3)
+
 
