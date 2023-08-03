@@ -3,9 +3,9 @@
     
     "Precision": "double",
     
-    "Solver": "be",
+    "Solver": "sundials",
 
-    "Summa_Exe": "/Summa-Projects/Summa-Actors/build/summa/bin/summa.exe",
+    "Summa_Exe": "/u1/kck540/Projects/hydrology/Summa-Sundials-Actors/Summa-Actors/bin/summa_actors",
 
-    "Version": "non-actors"
+    "Version": "actors"
 }
