@@ -1,0 +1,21 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '1996-11-28 00:00' ! 
+simEndTime           '1997-04-22 02:00' ! 
+tmZoneInfo           'localTime' ! 
+settingsPath         '/Users/amedin/Research/SummaSundials/summa/laugh_tests/test_cases/settings/' !  setting_path
+forcingPath          '/Users/amedin/Research/SummaSundials/summa/laugh_tests/test_cases/input_data/umpqua/' !  input_path
+outputPath           '/Users/amedin/Research/SummaSundials/summa/laugh_tests/test_cases/output/actors/umpqua_snowIncept/' !  output_path
+decisionsFile        'wrrPaperTestCases/umpqua_snowIncept/common/summa_zDecisions_umpquaStickySnow.txt' !  decision
+outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
+globalHruParamFile   'wrrPaperTestCases/umpqua_snowIncept/common/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/umpqua_snowIncept/common/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/umpqua_snowIncept/common/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/umpqua_snowIncept/common/summa_zParamTrial_umpquaStickySnow.nc' !  para_trial
+forcingListFile      'wrrPaperTestCases/umpqua_snowIncept/common/summa_zForcingFileList.txt' !  forcing_list
+initConditionFile    'wrrPaperTestCases/umpqua_snowIncept/common/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'umpquaStickySnow' !  output_prefix
+vegTableFile         'meta/VEGPARM.TBL' ! 
+soilTableFile        'meta/SOILPARM.TBL' ! 
+generalTableFile     'meta/GENPARM.TBL' ! 
+noahmpTableFile      'meta/MPTABLE.TBL' ! 
+! history Mon Jul 20 16:08:16 2020: /pool0/home/andrbenn/data/summa_3/utils/convert_summa_config_v2_v3.py ./wrrPaperTestCases/figure05/summa_fileManager_9697_storck.txt
