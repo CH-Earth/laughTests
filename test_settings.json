@@ -1,7 +1,7 @@
 {
     "Test_List": ["celia1990", "colbeck1976", "mizoguchi1990", "vanderborght2005"],
     
-    "Precision": "single",
+    "Precision": "double",
     
     "Solver": "numrec",
 
