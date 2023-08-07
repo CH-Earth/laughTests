@@ -24,7 +24,7 @@ Once you have installed summa you can now set up the laugh tests. The laugh test
     - "Summa_Exe": "/absolute/path/to/summa.exe"
 
  - Version: actors or non-actors versions of the programs, they have some differences in setting up
-    - "Version": "actors"
+    - "Version": "non-actors"
 
 ### Using `laugh_tests.py`
 Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laugh_tests.py` file. You run it with the following `python3 laugh_tests.py [options]`. Below are a list of options:
@@ -44,9 +44,11 @@ If you plan to run more tests with multiple configurations use the `reset` optio
     
     "Precision": "single",
     
-    "Solver": "be",
+    "Solver": "numrec",
 
     "Summa_Exe": "/absolute/path/to/summa.exe"
+
+    "Version": "non-actors"
 }
 ```
 
