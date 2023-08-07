@@ -1,9 +1,9 @@
 {
     "Test_List": ["celia1990", "colbeck1976", "mizoguchi1990", "vanderborght2005"],
     
-    "Precision": "double",
+    "Precision": "single",
     
-    "Solver": "sundials",
+    "Solver": "numrec",
 
     "Summa_Exe": "/u1/kck540/Projects/hydrology/Summa-Sundials-Actors/Summa-Actors/bin/summa_actors",
 
