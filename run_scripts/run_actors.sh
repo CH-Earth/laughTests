@@ -37,3 +37,5 @@ case $TEST in
         echo "Vanderborght 3 Finished"
         ;;
 esac
+
+# MISSING WIGMOSTA AND WRR

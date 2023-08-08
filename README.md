@@ -9,7 +9,7 @@ To get a copy of the laugh tests, simply clone the repo to your system you wish 
 ## Running the Laugh-Tests
 To run the laugh tests first you must install and compile SUMMA. This can be done with the documentation found here https://summa.readthedocs.io/en/latest/SUMMA_documentation/.
 
-Once you have installed summa you can now set up the laugh tests. The laugh tests are configured through the `test_settings.json` file included in the laugh_test repository. This file will need to be modified to work in your envrionment and to run the specific tests you desire. The settings are configured by the user by modifing the value of the key-value pairs in the `test_settings.json` file. Detailed explenations of the key-value pairs are provided below:
+Once you have installed summa you can now set up the laugh tests. The laugh tests are configured through the `test_settings.json` file included in the laugh_test repository. This file will need to be modified to work in your environment and to run the specific tests you desire. The settings are configured by the user by modifying the value of the key-value pairs in the `test_settings.json` file. Detailed explanations of the key-value pairs are provided below:
 
  - Test_List: This is a the list of test you wish to run. The directories and file manager files will automatically be set up by running the `laugh_test.py` file which instructions can be found in the `laugh_test.py` section below
     - Example: "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"]
@@ -17,14 +17,14 @@ Once you have installed summa you can now set up the laugh tests. The laugh test
  - Precision: Either use "single" or "double". This specifies what precision of forcing data to use for the laugh tests.
     - Example: "Precision": "single",
 
- - Solver: Either use "be" or "sundials". This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
-    - Example: "Solver": "be",
+ - Solver: Either use "numrec" or "ida". This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
+    - Example: "Solver": "numrec",
 
  - Summa_exe: Provide a full path to the summa executable that you compiled.
     - "Summa_Exe": "/absolute/path/to/summa.exe"
 
  - Version: actors or non-actors versions of the programs, they have some differences in setting up
-    - "Version": "actors"
+    - "Version": "non-actors"
 
 ### Using `laugh_tests.py`
 Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laugh_tests.py` file. You run it with the following `python3 laugh_tests.py [options]`. Below are a list of options:
@@ -44,9 +44,11 @@ If you plan to run more tests with multiple configurations use the `reset` optio
     
     "Precision": "single",
     
-    "Solver": "be",
+    "Solver": "numrec",
 
     "Summa_Exe": "/absolute/path/to/summa.exe"
+
+    "Version": "non-actors"
 }
 ```
 

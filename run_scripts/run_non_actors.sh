@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script runs the non-actor test cases. To use this script you have to set the SUMMA_EXE variable to where the summa.exe is located.
+# This script runs the non-actor test cases. To use this script you have to set the SUMMA_EXE variable to where the summa executable is located.
 # This script runs one test as specified by the user from the input. To run multiple tests use the python script or create your own script that calls the cases within this script.
 
 case $TEST in
@@ -37,3 +37,6 @@ case $TEST in
         echo "Vanderborght 3 Finished"
         ;;
 esac
+
+# MISSING WIGMOSTA AND WRR
+
