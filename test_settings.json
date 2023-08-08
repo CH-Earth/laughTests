@@ -1,11 +1,11 @@
 {
-    "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"],
+    "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005"],
     
     "Precision": "double",
     
-    "Solver": "numrec",
+    "Solver": "ida",
 
-    "Summa_Exe": "/Summa-Projects/Summa-Actors/build/summa/bin/summa.exe",
+    "Summa_Exe": "/u1/kck540/Projects/hydrology/Summa-Sundials-Actors/Summa-Actors/bin/summa_actors",
 
-    "Version": "non-actors"
+    "Version": "actors"
 }
