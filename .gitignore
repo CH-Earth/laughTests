@@ -49,8 +49,3 @@ test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/*test.txt
 test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/*test.txt
 
 
-test_cases/settings/syntheticTestCases/celia1990/fileManagers/fileManager_celia1990_test.txt
-test_cases/settings/syntheticTestCases/colbeck1976/fileManagers/fileManager_colbeck1976-exp1_test.txt
-test_cases/settings/syntheticTestCases/colbeck1976/fileManagers/fileManager_colbeck1976-exp2_test.txt
-test_cases/settings/syntheticTestCases/colbeck1976/fileManagers/fileManager_colbeck1976-exp3_test.txt
-test_cases/settings/syntheticTestCases/mizoguchi1990/fileManagers/fileManager_mizoguchi1990_test.txt
