@@ -1,25 +1,25 @@
 {
-    "Distributed_Settings": {
-        "distributed_mode": false,
-        "servers_list": [],
-        "port": 4444,
-        "total_hru_count": 517315,
-        "num_hru_per_batch": 1000
-    },
-    "Summa_Actor": {
-        "max_gru_per_job": 1
-    },
     "File_Access_Actor": {
         "num_partitions_in_output_buffer": 1,
         "num_timesteps_in_output_buffer": 1
     },
-    "Job_Actor": {
-        "file_manager_path": "/Summa-Projects/laugh_tests/test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/fileManager_vanderborght2005-exp2_test.txt",
-        "output_csv": false,
-        "csv_path": "/scratch/kck540/Summa_Distributed_Failure_Case/csv"
-    },
     "HRU_Actor": {
-        "print_output": true,
-        "output_frequency": 1
+        "output_frequency": 1,
+        "print_output": true
+    },
+    "Summa_Actor": {
+        "max_gru_per_job": 1
+    },
+    "Distributed_Settings": {
+        "total_hru_count": 517315,
+        "num_hru_per_batch": 1000,
+        "servers_list": [],
+        "port": 4444,
+        "distributed_mode": false
+    },
+    "Job_Actor": {
+        "output_csv": false,
+        "file_manager_path": "/u1/kck540/Projects/hydrology/Summa-Sundials-Actors/laugh_tests/test_cases/settings/syntheticTestCases/vanderborght2005/fileManagers/fileManager_vanderborght2005-exp2_test.txt",
+        "csv_path": "/scratch/kck540/Summa_Distributed_Failure_Case/csv"
     }
 }
