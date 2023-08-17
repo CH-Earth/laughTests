@@ -17,10 +17,10 @@ Once you have installed summa you can now set up the laugh tests. The laugh test
  - Precision: Either use "single" or "double". This specifies what precision of forcing data to use for the laugh tests.
     - Example: "Precision": "single",
 
- - Solver: Either use "numrec", "ida" for V4 and "v3" for older implementaitons of SUMMA. This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
+ - Solver: Either use "numrec", "ida", "kinsol" for V4 and "v3" for older implementaitons of SUMMA. This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
     - Example: "Solver": "numrec",
 
- - Summa_exe: Provide a full path to the summa executable that you compiled.
+ - Summa_exe: Provide a full path to the summa or summa_sundials executable that you compiled.
     - "Summa_Exe": "/absolute/path/to/summa.exe"
 
  - Version: actors or non-actors versions of the programs, they have some differences in setting up
@@ -52,7 +52,24 @@ If you plan to run more tests with multiple configurations use the `reset` optio
 }
 ```
 
+### Note on Parameters
+We have left the v4 parameters out of the `summa_zLocalParamInfo.txt` files, so that the V3 Summa will run. If you would like to change these parameters, the lines to add to the files to use these parameters at default are the following (and change as you desire). The be_steps parameter applies to all V4 choices of solver, whereas the rel* and abs* parameters only apply to choice "ida".
 
+be_steps                  |       1.0000 |       1.0000 |     512.0000
+relTolTempCas             |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolTempCas             |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolTempVeg             |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolTempVeg             |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolWatVeg              |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolWatVeg              |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolTempSoilSnow        |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolTempSoilSnow        |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolWatSnow             |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolWatSnow             |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolMatric              |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolMatric              |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolAquifr              |       1.0d-6 |       1.0d-10|       1.0d-1
+absTolAquifr              |       1.0d-6 |       1.0d-10|       1.0d-1
 
 
 
