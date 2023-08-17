@@ -12,7 +12,7 @@ To run the laugh tests first you must install and compile SUMMA. This can be don
 Once you have installed summa you can now set up the laugh tests. The laugh tests are configured through the `test_settings.json` file included in the laugh_test repository. This file will need to be modified to work in your environment and to run the specific tests you desire. The settings are configured by the user by modifying the value of the key-value pairs in the `test_settings.json` file. Detailed explanations of the key-value pairs are provided below:
 
  - Test_List: This is a the list of test you wish to run. The directories and file manager files will automatically be set up by running the `laugh_test.py` file which instructions can be found in the `laugh_test.py` section below
-    - Example: "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"]
+    - Example: "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999", "reynolds_canopySrad_windPrfile_stomResist", "reynolds_groundwatr", "senator_alb_method", "umpqua_snowIncept"]
 
  - Precision: Either use "single" or "double". This specifies what precision of forcing data to use for the laugh tests.
     - Example: "Precision": "single",
@@ -42,11 +42,11 @@ If you plan to run more tests with multiple configurations use the `reset` optio
 {
     "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"],
     
-    "Precision": "single",
+    "Precision": "double",
     
     "Solver": "numrec",
 
-    "Summa_Exe": "/absolute/path/to/summa.exe"
+    "Summa_Exe": "/absolute/path/to/summa_sundials.exe"
 
     "Version": "non-actors"
 }
