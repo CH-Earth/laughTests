@@ -5,4 +5,4 @@
 !  (1) The name of a forcing file
 !        --> filename must be in single quotes
 ! ****************************************************************************************************
- 'mizoguchi_forcing_single_precision.nc'
+ 'mizoguchi1990_forcing_single_precision.nc'

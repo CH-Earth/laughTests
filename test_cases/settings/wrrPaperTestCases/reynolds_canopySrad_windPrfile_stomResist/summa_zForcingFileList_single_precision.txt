@@ -5,4 +5,4 @@
 !  (1) The name of a forcing file
 !        --> filename must be in single quotes
 ! ****************************************************************************************************
- 'senator_forcing_sheltered_double_precision.nc'
+ 'reynolds_forcing_single_precision.nc'
