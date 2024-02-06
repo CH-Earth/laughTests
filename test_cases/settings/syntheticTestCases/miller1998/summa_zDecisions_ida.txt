@@ -166,7 +166,7 @@ howHeatCap                      closedForm     ! (30) choice of method to comput
 ! timeDlay  ! time-delay histogram
 ! qInstant  ! instantaneous routing
 ! -----------------------------------------------------------------------------------------------
-! (30) choice of method to compute heat capacity in energy equation
-! closedForm  ! closed form
+! (30) choice of variable in energy conservation backward Euler residual
+! closedForm  ! closed form heat capacity
 ! enthalpyFD  ! enthalpy finite difference, has better coincidence of energy conservation
 ! ***********************************************************************************************
