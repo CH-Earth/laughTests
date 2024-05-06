@@ -40,9 +40,9 @@ case $TEST in
         ;;
 
     wigmosta1999)
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_wigmosta1999-exp1_test.json > $OUTPUT_PATH/summa_wigmosta_1.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManagers/fileManager_wigmosta1999-exp1_test.txt > $OUTPUT_PATH/wigmosta_1_actors.txt
         echo "Wigmosta 1 Finished"
-        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManager_wigmosta1999-exp2_test.json > $OUTPUT_PATH/summa_wigmosta_2.txt
+        $SUMMA_EXE -g 1 1 -m $FILE_MANAGER_PATH/fileManagers/fileManager_wigmosta1999-exp2_test.txt > $OUTPUT_PATH/wigmosta_2_actors.txt
         echo "Wigmosta 2 Finished"
         ;;
 
