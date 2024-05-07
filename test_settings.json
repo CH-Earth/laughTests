@@ -1,7 +1,7 @@
 {
-    "Test_List": ["all"],
+    "Test_List": ["reynolds_canopySrad_windPrfile_stomResist", "reynolds_groundwatr", "senator_alb_method", "umpqua_snowIncept"],
         
-    "Solver": "ida",
+    "Solver": "v3",
     
-    "Executables": ["/u1/kck540/Projects/hydrology/Summa-Sundials-Actors/Summa-Actors/bin/summa_actors"]
+    "Executables": ["/home/kklenk/Projects/hydrology/summa/Summa-Actors/build/summa/bin/summa.exe"]
 }
