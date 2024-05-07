@@ -13,8 +13,8 @@ attributeFile        'syntheticTestCases/mizoguchi1990/summa_zLocalAttributes.nc
 trialParamFile       'syntheticTestCases/mizoguchi1990/summa_zParamTrial.nc' !  para_trial
 forcingListFile      'syntheticTestCases/mizoguchi1990/summa_zForcingFileList_<PRECISION>' !  forcing_list
 initConditionFile    'syntheticTestCases/mizoguchi1990/summa_zInitialCond.nc' !  initial_cond
-outFilePrefix        '<VERSION>_mizoguchi1990_<OUTPUT>' !  output_prefix
+outFilePrefix        'mizoguchi1990' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' ! 
 soilTableFile        'meta/SOILPARM.TBL' ! 
 generalTableFile     'meta/GENPARM.TBL' ! 
-noahmpTableFile      'meta/MPTABLE.TBL' ! /home/local/kck540/SUMMA-Projects/Summa-Sundials-Test/summa/Laugh-Tests/test_cases/output/non_actors/mizoguchi1990
+noahmpTableFile      'meta/MPTABLE.TBL' ! 

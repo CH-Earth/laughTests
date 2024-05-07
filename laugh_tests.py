@@ -9,12 +9,9 @@ Create all of the output directories for the test cases
 """
 def initOutputDirs(test_cases):
     outputDir = "./test_cases/output/"
-    if not os.path.exists(outputDir):
-        os.mkdir(outputDir)
-    for dir in test_cases:
-        path = os.path.join(outputDir, dir)
-        if not os.path.exists(path):
-            os.mkdir(path)
+    for test in test_cases:
+        path = os.path.join(outputDir, test["name"])
+        os.makedirs(path, exist_ok=True)
 
 """
 Clean up the output directories for the test cases
@@ -31,9 +28,10 @@ Clean up the file managers for the test cases
 This cleans up the generated file managers for the test cases
 """
 def cleanFileManagers(test_cases):
-    settings_dir = "./test_cases/settings/syntheticTestCases/"
-    for dir in test_cases:
-        path = os.path.join(settings_dir, dir)
+    settings_dir = "./test_cases/settings/"
+    for test in test_cases:
+        path = os.path.join(settings_dir, test["type"])
+        path = os.path.join(path, test["name"])
         if os.path.exists(path):
             file_managers = os.path.join(path, "fileManagers")
             for file_manager in os.listdir(file_managers):
@@ -82,40 +80,33 @@ def setActorConfig(file_manager, version, path, specific_expirement):
 """
 Setup the file managers for the test cases
 """
-def setup(test_cases, precision, solver, version):
-
-    basedir = os.getcwd() + "/test_cases" # Base directory, first level in laugh_tests
-    
-    settings_dir = "./test_cases/settings/syntheticTestCases/"
-    precision, output = determinePrecisionParameters(precision)
-    version_parm = getVersionParameters(version)
+def setup(test_cases, precision, solver):
+    # Form full path to the test_cases dir
+    basedir = os.getcwd() + "/test_cases"
+    settings_dir = "./test_cases/settings/"
     cleanFileManagers(test_cases)
 
-    for dir in test_cases:
-        path = os.path.join(settings_dir, dir)
-        print(path)
-        if not os.path.exists(path):
-            print("Test case does not exist: " + dir)
-        else:
-            print("Setting up " + dir)
-            file_managers_path = os.path.join(path, "fileManagers")
-            for file_manager in os.listdir(file_managers_path):
-                specific_expirement = re.findall("fileManager_([^._]+).txt", file_manager)
-                file_manager = os.path.join(file_managers_path, file_manager)
-                with open(file_manager, 'r') as f:
-                    data = f.read()
-                    data = data.replace('<SOLVER>', solver)
-                    data = data.replace('<BASEDIR>', basedir)
-                    data = data.replace('<PRECISION>', precision)
-                    data = data.replace('<OUTPUT>', output)
-                    data = data.replace('<VERSION>', version_parm)
-                    
-                file_manager = os.path.splitext(file_manager)[0]+'_test.txt'
-                with open(file_manager, 'w') as f:
-                    f.write(data)
-                
-                setActorConfig(file_manager, version, path, specific_expirement)
-            
+    for test in test_cases:
+        test_settings_dir = os.path.join(settings_dir, test["type"])
+        test_settings_dir = os.path.join(test_settings_dir, test["name"])
+        if not os.path.exists(test_settings_dir):
+            print("Test case does not exist: " + test["name"])
+            continue
+        print("Setting up " + test["name"])
+        file_managers_path = os.path.join(test_settings_dir, "fileManagers")
+        for file_manager in os.listdir(file_managers_path):
+            sub_test = re.findall("fileManager_([^._]+).txt", file_manager)
+            file_manager = os.path.join(file_managers_path, file_manager)
+            print("\tSetting sub-test " + sub_test[0])
+            with open(file_manager, 'r') as f:
+                data = f.read()
+                data = data.replace('<SOLVER>', solver)
+                data = data.replace('<BASEDIR>', test_settings_dir)
+                data = data.replace('<PRECISION>', precision)
+            file_manager = os.path.splitext(file_manager)[0]+'_test.txt'
+            with open(file_manager, 'w') as f:
+                f.write(data)
+                            
 
 def getRunScript(version, base_dir):
     if version == "non-actors":
@@ -153,29 +144,53 @@ def runTest(test_cases, summa_exe, version):
             print("Finished Test: " + dir)
 
 
+def main():
+    with open("test_settings.json", "r") as settings_file:
+        settings = json.load(settings_file)
+        if 'Precision' not in settings:
+            settings['Precision'] = 'double'
+        if 'all' in settings['Test_List']:
+            with open("test_inventory.json", "r") as inventory_file:
+                inventory = json.load(inventory_file)
+                settings['Test_List'] = inventory['tests']
+        
+    # print(settings)
 
-# Start of main
-with open("test_settings.json", "r") as test_settings_file:
-    test_settings = json.load(test_settings_file)
-    test_cases = test_settings["Test_List"]
-    precision = test_settings["Precision"]
-    solver = test_settings["Solver"]
-    summa_exe = test_settings["Summa_Exe"]
-    version = test_settings["Version"]
+    if len(sys.argv) == 2:
+        if sys.argv[1] == "init":
+            print("Initializing test cases")
+            initOutputDirs(settings['Test_List'])
+            setup(settings['Test_List'], settings['Precision'], settings['Solver'])
+        elif sys.argv[1] == "clean":
+            print("Cleaning output directories")
+            cleanFileManagers(settings['Test_List'])
+        else:
+            print("Invalid argument")
+            print("Valid arguments are: init, run, reset, clean")
+    
+             
 
-if len(sys.argv) == 2:
-    if sys.argv[1] == "init":
-        initOutputDirs(test_cases)
-        setup(test_cases, precision, solver, version)
-    elif sys.argv[1] == "clean":
-        # cleanOutputDirs(test_cases)
-        cleanFileManagers(test_cases)
-    elif sys.argv[1] == "reset":
-        cleanFileManagers(test_cases)
-    elif sys.argv[1] == "run":
-        runTest(test_cases, summa_exe, version)
-    elif sys.argv[1] == "check":
-        checkOutput()
-else:
-    print("Invalid argument")
-    print("Valid arguments are: init, run, reset, clean")
+        # test_cases = test_settings["Test_List"]
+        # precision = test_settings["Precision"]
+        # solver = test_settings["Solver"]
+        # summa_exe = test_settings["Summa_Exe"]
+        # version = test_settings["Version"]
+
+#     if len(sys.argv) == 2:
+#         if sys.argv[1] == "init":
+#             initOutputDirs(test_cases)
+#             setup(test_cases, precision, solver, version)
+#         elif sys.argv[1] == "clean":
+#             cleanFileManagers(test_cases)
+#         elif sys.argv[1] == "reset":
+#             cleanFileManagers(test_cases)
+#         elif sys.argv[1] == "run":
+#             runTest(test_cases, summa_exe, version)
+#         elif sys.argv[1] == "check":
+#             checkOutput()
+#     else:
+#         print("Invalid argument")
+#         print("Valid arguments are: init, run, reset, clean")
+
+if __name__ == "__main__":
+    main()

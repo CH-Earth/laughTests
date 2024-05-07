@@ -13,7 +13,7 @@ attributeFile        'syntheticTestCases/miller1998/summa_zLocalAttributes.nc' !
 trialParamFile       'syntheticTestCases/miller1998/summa_zParamTrial_millerSand.nc' !  para_trial
 forcingListFile      'syntheticTestCases/miller1998/summa_zForcingFileList_<PRECISION>' !  forcing_list
 initConditionFile    'syntheticTestCases/miller1998/summa_zInitialCond_millerSand.nc' !  initial_cond
-outFilePrefix        '<VERSION>_millerSand_<OUTPUT>' !  output_prefix
+outFilePrefix        'millerSand' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !
 generalTableFile     'meta/GENPARM.TBL' !

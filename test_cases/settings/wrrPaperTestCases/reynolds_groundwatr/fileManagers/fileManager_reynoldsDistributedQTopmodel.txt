@@ -13,7 +13,7 @@ attributeFile        'wrrPaperTestCases/reynolds_groundwatr/common/summa_zLocalA
 trialParamFile       'wrrPaperTestCases/reynolds_groundwatr/common/summa_zParamTrial_reynoldsDistributedQTopmodel.nc' !  para_trial
 forcingListFile      'wrrPaperTestCases/reynolds_groundwatr/common/summa_zForcingFileList_reynoldsDistributedQTopmodel_<PRECISION>' !  forcing_list
 initConditionFile    'wrrPaperTestCases/reynolds_groundwatr/common/summa_zInitialCond_reynoldsDistributedQTopmodel.nc' !  initial_cond
-outFilePrefix        '<VERSION>_reynoldsDistributedQTopmodel_<OUTPUT>' !  output_prefix
+outFilePrefix        'reynoldsDistributedQTopmodel' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' ! 
 soilTableFile        'meta/SOILPARM.TBL' ! 
 generalTableFile     'meta/GENPARM.TBL' ! 

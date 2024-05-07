@@ -1,0 +1,36 @@
+{
+  "tests": [
+    {"name": "northamerica2005",
+     "type": "multiGruTestCases"},
+
+     {"name": "celia1990",
+     "type": "syntheticTestCases"},
+
+     {"name": "colbeck1976",
+     "type": "syntheticTestCases"},
+
+     {"name": "miller1998",
+     "type": "syntheticTestCases"},
+
+     {"name": "mizoguchi1990",
+     "type": "syntheticTestCases"},
+
+     {"name": "vanderborght2005",
+     "type": "syntheticTestCases"},
+
+     {"name": "wigmosta1999",
+     "type": "syntheticTestCases"},
+
+     {"name": "reynolds_canopySrad_windPrfile_stomResist",
+     "type": "wrrPaperTestCases"},
+
+     {"name": "reynolds_groundwatr",
+     "type": "wrrPaperTestCases"},
+     
+     {"name": "senator_alb_method",
+     "type": "wrrPaperTestCases"},
+
+     {"name": "umpqua_snowIncept",
+     "type": "wrrPaperTestCases"}
+    ]
+}

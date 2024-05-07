@@ -13,7 +13,7 @@ attributeFile        'syntheticTestCases/vanderborght2005/summa_zLocalAttributes
 trialParamFile       'syntheticTestCases/vanderborght2005/summa_zParamTrial_vanderborght2005_exp2.nc' !  para_trial
 forcingListFile      'syntheticTestCases/vanderborght2005/summa_zForcingFileList_<PRECISION>' !  forcing_list
 initConditionFile    'syntheticTestCases/vanderborght2005/summa_zInitialCond.nc' !  initial_cond
-outFilePrefix        '<VERSION>_vanderborght2005_exp2_<OUTPUT>' !  output_prefix
+outFilePrefix        'vanderborght2005_exp2' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !
 generalTableFile     'meta/GENPARM.TBL' !

@@ -13,7 +13,7 @@ attributeFile        'wrrPaperTestCases/umpqua_snowIncept/common/summa_zLocalAtt
 trialParamFile       'wrrPaperTestCases/umpqua_snowIncept/common/summa_zParamTrial_umpquaLightSnow.nc' !  para_trial
 forcingListFile      'wrrPaperTestCases/umpqua_snowIncept/common/summa_zForcingFileList_<PRECISION>' !  forcing_list
 initConditionFile    'wrrPaperTestCases/umpqua_snowIncept/common/summa_zInitialCond.nc' !  initial_cond
-outFilePrefix        '<VERSION>_umpquaLightSnow_<OUTPUT>' !  output_prefix
+outFilePrefix        'umpquaLightSnow' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' ! 
 soilTableFile        'meta/SOILPARM.TBL' ! 
 generalTableFile     'meta/GENPARM.TBL' ! 
