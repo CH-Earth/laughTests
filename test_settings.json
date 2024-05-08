@@ -1,8 +1,8 @@
 {
     "Test_List": ["all"],
         
-    "Solver": "v3",
+    "Solver": "ida",
     
-    "Executables": ["/home/kklenk/Projects/hydrology/summa/Summa-Actors/build/summa/bin/summa.exe",
-                    "/home/kklenk/Projects/hydrology/summa/Summa-Actors/bin/summa_be"]
+    "Executables": ["/home/kklenk/Projects/hydrology/summa/Summa-Actors/build/summa/bin/summa_sundials.exe",
+                    "/home/kklenk/Projects/hydrology/summa/Summa-Actors/bin/summa_actors"]
 }
