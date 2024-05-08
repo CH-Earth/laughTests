@@ -13,7 +13,7 @@ attributeFile        'wrrPaperTestCases/senator_alb_method/summa_zLocalAttribute
 trialParamFile       'wrrPaperTestCases/senator_alb_method/summa_zParamTrial_senatorVarDecay.nc' !  para_trial
 forcingListFile      'wrrPaperTestCases/senator_alb_method/summa_zForcingFileList_<PRECISION>' !  forcing_list
 initConditionFile    'wrrPaperTestCases/senator_alb_method/summa_zInitialCond.nc' !  initial_cond
-outFilePrefix        'albedoTest' !  output_prefix
+outFilePrefix        'albedoTestVar' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !
 generalTableFile     'meta/GENPARM.TBL' !

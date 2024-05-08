@@ -69,17 +69,6 @@ def setup(test_cases, precision, solver):
             with open(file_manager, 'w') as f:
                 f.write(data)
                             
-
-def getRunScript(version, base_dir):
-    if version == "non-actors":
-        run_script = os.path.join(base_dir, "run_scripts/run_non_actors.sh")
-    elif version == "actors":
-        run_script = os.path.join(base_dir, "run_scripts/run_actors.sh")
-    else:
-        print("Invalid version")
-        sys.exit()
-    return run_script
-
 """
 Run the test cases
 """
@@ -89,25 +78,25 @@ def runTest(test_cases, summa_exe):
     output_path = os.path.join(base_dir, "test_cases/output")
     print(base_dir)
     print(output_path)
-    for test in test_cases:
-        if test["type"] == "multiGruTestCases":
-            num_gru = "25"
-        else:
-            num_gru = "1"
-        settings_dir = os.path.join(base_dir, "test_cases/settings")
-        settings_dir = os.path.join(settings_dir, test["type"])
-        settings_dir = os.path.join(settings_dir, test["name"])
-        print("Running", test["name"])
-        file_managers_path = os.path.join(settings_dir, "fileManagers")
-        test_counter = 1
-        for file_manager in os.listdir(file_managers_path):
-            if file_manager.endswith("_test.txt"):
-                file_manager = os.path.join(file_managers_path, file_manager)
-                log_file_path = os.path.join(output_path, test["name"], "log_" + str(test_counter) + ".txt")
-                with open(log_file_path, 'w') as log_file:
-                    result = subprocess.run([summa_exe[0], "-g", "1", num_gru, "-m", file_manager], stdout=log_file, check=False)
-                    test_counter += 1
-                print(f"Test {test['name']} exit code was: {result.returncode}")
+    for exe_counter, exe in enumerate(summa_exe):
+        print("\n\nRunning executable", exe)
+        suffix = "exe_" + str(exe_counter)
+        for test in test_cases:
+            num_gru = "25" if test["type"] == "multiGruTestCases" else "1"
+            settings_dir = os.path.join(base_dir, "test_cases/settings")
+            settings_dir = os.path.join(settings_dir, test["type"])
+            settings_dir = os.path.join(settings_dir, test["name"])
+            print("Running", test["name"])
+            file_managers_path = os.path.join(settings_dir, "fileManagers")
+            for file_manager in os.listdir(file_managers_path):
+                if file_manager.endswith("_test.txt"):
+                    file_manager = os.path.join(file_managers_path, file_manager)
+                    print("\tRunning file manager " + file_manager)
+                    sub_test = re.findall("fileManager_([^_]+)_test.txt", file_manager)
+                    log_file_path = os.path.join(output_path, test["name"], "log_" + sub_test[0] + "_" + suffix + ".txt")
+                    with open(log_file_path, 'w') as log_file:
+                        result = subprocess.run([exe, "-s", suffix, "-g", "1", num_gru, "-m", file_manager], stdout=log_file, check=False)
+                    print(f"Test {test['name']} exit code was: {result.returncode}")
                         
 def main():
     with open("test_settings.json", "r") as settings_file:
@@ -128,8 +117,6 @@ def main():
                             new_test_list.append(inventory_test)
                 settings['Test_List'] = new_test_list
         
-    # print(settings)
-
     if len(sys.argv) == 2:
         if sys.argv[1] == "init":
             print("Initializing test cases")
@@ -141,31 +128,7 @@ def main():
             runTest(settings['Test_List'], settings['Executables'])
         else:
             print("Invalid argument")
-            print("Valid arguments are: init, run, reset, clean")
+            print("Valid arguments are: init, run, clean")
     
-             
-
-        # test_cases = test_settings["Test_List"]
-        # precision = test_settings["Precision"]
-        # solver = test_settings["Solver"]
-        # summa_exe = test_settings["Summa_Exe"]
-        # version = test_settings["Version"]
-
-#     if len(sys.argv) == 2:
-#         if sys.argv[1] == "init":
-#             initOutputDirs(test_cases)
-#             setup(test_cases, precision, solver, version)
-#         elif sys.argv[1] == "clean":
-#             cleanFileManagers(test_cases)
-#         elif sys.argv[1] == "reset":
-#             cleanFileManagers(test_cases)
-#         elif sys.argv[1] == "run":
-#             runTest(test_cases, summa_exe, version)
-#         elif sys.argv[1] == "check":
-#             checkOutput()
-#     else:
-#         print("Invalid argument")
-#         print("Valid arguments are: init, run, reset, clean")
-
 if __name__ == "__main__":
     main()
