@@ -13,8 +13,8 @@ vegeParTbl                      USGS            ! (04) vegetation category datas
 soilStress                      NoahType        ! (05) choice of function for the soil moisture control on stomatal resistance
 stomResist                      BallBerry       ! (06) choice of function for stomatal resistance
 ! ***********************************************************************************************************************
-num_method                      itertive          ! (07) choice of numerical method
-fDerivMeth                      analytic        ! (08) method used to calculate Jacobian
+num_method                      itertive        ! (07) choice of numerical method
+fDerivMeth                      analytic        ! (08) method used to calculate flux derivatives
 LAI_method                      specified       ! (09) method used to determine LAI and SAI
 f_Richards                      mixdform        ! (10) form of Richard's equation
 groundwatr                      qTopmodl        ! (11) choice of groundwater parameterization
@@ -36,7 +36,6 @@ thCondSnow                      jrdn1991        ! (26) choice of thermal conduct
 thCondSoil                      mixConstit      ! (27) choice of thermal conductivity representation for soil
 spatial_gw                      localColumn     ! (28) choice of method for the spatial representation of groundwater
 subRouting                      timeDlay        ! (29) choice of method for sub-grid routing
-nrgConserv                      closedForm      ! (30) choice of variable in energy equations (BE residual or IDA state variable)
 ! ***********************************************************************************************
 ! ***** description of the options available -- nothing below this point is read ****************
 ! ***********************************************************************************************
