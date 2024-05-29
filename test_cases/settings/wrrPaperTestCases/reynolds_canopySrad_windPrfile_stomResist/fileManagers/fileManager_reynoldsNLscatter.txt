@@ -4,16 +4,16 @@ simEndTime           '2008-09-30 00:00' !
 tmZoneInfo           'localTime' !
 settingsPath         '<BASEDIR>/settings/' !  setting_path
 forcingPath          '<BASEDIR>/input_data/reynolds/' !  input_path
-outputPath           '<BASEDIR>/output/actors/reynolds_canopySrad_windPrfile_stomResist/' !  output_path
-decisionsFile        'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zDecisions_reynoldsNLscatter_<SOLVER>.txt' !  decision
+outputPath           '<BASEDIR>/output/reynolds_canopySrad_windPrfile_stomResist/' !  output_path
+decisionsFile        'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zDecisions_reynoldsNLscatter_<SOLVER>.txt' !  decision
 outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
-globalHruParamFile   'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zLocalParamInfo.txt' !  local_par
-globalGruParamFile   'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zBasinParamInfo.txt' !  basin_par
-attributeFile        'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zLocalAttributes.nc' !  local_attr
-trialParamFile       'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zParamTrial.nc' !  para_trial
-forcingListFile      'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zForcingFileList_<PRECISION>' !  forcing_list
-initConditionFile    'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/common/summa_zInitialCond.nc' !  initial_cond
-outFilePrefix        '<VERSION>_reynoldsNLscatter_<OUTPUT>' !  output_prefix
+globalHruParamFile   'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zParamTrial.nc' !  para_trial
+forcingListFile      'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zForcingFileList_<PRECISION>' !  forcing_list
+initConditionFile    'wrrPaperTestCases/reynolds_canopySrad_windPrfile_stomResist/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'reynoldsNLscatter' !  output_prefix
 vegTableFile         'meta/VEGPARM.TBL' !
 soilTableFile        'meta/SOILPARM.TBL' !
 generalTableFile     'meta/GENPARM.TBL' !

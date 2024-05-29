@@ -1,10 +1,33 @@
 # Laugh-Tests
-Testing Framework for SUMMA
+This repository serves as a testing framework for SUMMA and Summa-Actors, designed to validate the integrity of the laugh tests and facilitate the comparison of different SUMMA versions. The framework operates via a `laugh_tests.py` script, which, in conjunction with the `settings.json` configuration file, orchestrates the testing procedures.
 
-Included is a `laugh_test.py` python program that controls the testing framework. This includes setting up the directories and running the tests. There is also tests included to verify the output of the tests.
 
 ## Installing the Laugh-Tests
-To get a copy of the laugh tests, simply clone the repo to your system you wish to run the laugh_tests on. In previous configurations of this testing framework you were required to put this directory at the top level of your summa directory. THIS IS NO LONGER THE CASE. This repo can be cloned anywhere on your system. There is a configuration file `test_settings.json` that is used for controlling the testing framework.
+To install the testing framework, execute the following command:
+```bash
+git clone https://git.cs.usask.ca/numerical_simulations_lab/hydrology/laugh_tests.git 
+```
+
+## Directory Structure
+The directory structure of the laugh_tests repository is as follows:
+```bash
+|-- laugh_tests
+   | -- post_scripts
+   | -- run_scripts
+   | -- test_cases
+      | -- input_data
+      | -- settings
+      | -- output
+   | -- utils
+   | -- .gitignore
+   | -- laugh_tests.py
+   | -- README.md
+   | -- settings.json
+   | -- test_inventory.json
+```
+
+The `test_cases` directory will contain all the data for each of the available 
+tests. Within the `test_cases` directory, the `input_data` directory will contain the forcing data for each test, the `settings` directory will contain the file manager files for each test, and the `output` directory will be created when the tests are run.
 
 ## Running the Laugh-Tests
 To run the laugh tests first you must install and compile SUMMA. This can be done with the documentation found here https://summa.readthedocs.io/en/latest/SUMMA_documentation/.
@@ -40,16 +63,13 @@ If you plan to run more tests with multiple configurations use the `reset` optio
 ### EXAMPLE TEST_SETTINGS.json
 ```json
 {
-    "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"],
+    "Test_List": ["all"],
+        
+    "Solver": "ida",
     
-    "Precision": "double",
-    
-    "Solver": "homegrown",
-
-    "Summa_Exe": "/absolute/path/to/summa_sundials.exe"
-
-    "Version": "non-actors"
+    "Executables": ["/home/kklenk/Projects/hydrology/Summa-Actors/bin/summa_actors.exe"]
 }
+
 ```
 
 ### Note on Parameters
