@@ -39,8 +39,8 @@ Once you have installed summa you can now set up the laugh tests. The laugh test
  - Precision: Either use "single" or "double". This specifies what precision of forcing data to use for the laugh tests.
     - Example: "Precision": "single",
 
- - Solver: Either use "numrec", "ida", "kinsol" for V4 and "v3" for older implementaitons of SUMMA. This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
-    - Example: "Solver": "numrec",
+ - Solver: Either use "homegrown", "ida", "kinsol" for V4 and "v3" for older implementations of SUMMA. This specifies what solver to use for the solution to summa. The file manager file will automatically be set up from your selection here.
+    - Example: "Solver": "homegrown",
 
  - Summa_exe: Provide a full path to the summa or summa_sundials executable that you compiled.
     - "Summa_Exe": "/absolute/path/to/summa.exe"
@@ -66,7 +66,7 @@ If you plan to run more tests with multiple configurations use the `reset` optio
     
     "Precision": "double",
     
-    "Solver": "numrec",
+    "Solver": "homegrown",
 
     "Summa_Exe": "/absolute/path/to/summa_sundials.exe"
 

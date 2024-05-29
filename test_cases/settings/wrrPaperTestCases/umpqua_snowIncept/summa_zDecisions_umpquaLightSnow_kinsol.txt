@@ -63,7 +63,7 @@ nrgConserv                      closedForm      ! (30) choice of variable in ene
 ! Jarvis    ! Jarvis
 ! -----------------------------------------------------------------------------------------------
 ! (07) choice of numerical method
-! numrec    ! home-grown backward Euler
+! homegrown ! home-grown backward Euler
 ! kinsol    ! SUNDIALS backward Euler solution using Kinsol
 ! ida       ! SUNDIALS solution using IDA
 ! -----------------------------------------------------------------------------------------------
