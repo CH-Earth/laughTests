@@ -22,7 +22,8 @@ The directory structure of the laugh_tests repository is as follows:
    | -- .gitignore
    | -- laugh_tests.py
    | -- README.md
-   | -- test_settings.json
+   | -- settings.json
+   | -- test_inventory.json
 ```
 
 The `test_cases` directory will contain all the data for each of the available 
@@ -62,16 +63,13 @@ If you plan to run more tests with multiple configurations use the `reset` optio
 ### EXAMPLE TEST_SETTINGS.json
 ```json
 {
-    "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999"],
+    "Test_List": ["all"],
+        
+    "Solver": "ida",
     
-    "Precision": "double",
-    
-    "Solver": "homegrown",
-
-    "Summa_Exe": "/absolute/path/to/summa_sundials.exe"
-
-    "Version": "non-actors"
+    "Executables": ["/home/kklenk/Projects/hydrology/Summa-Actors/bin/summa_actors.exe"]
 }
+
 ```
 
 ### Note on Parameters

@@ -99,7 +99,7 @@ def runTest(test_cases, summa_exe):
                     print(f"Test {test['name']} exit code was: {result.returncode}")
                         
 def main():
-    with open("test_settings.json", "r") as settings_file:
+    with open("settings.json", "r") as settings_file:
         settings = json.load(settings_file)
         if 'Precision' not in settings:
             settings['Precision'] = 'double'

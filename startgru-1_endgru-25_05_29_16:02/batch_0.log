@@ -1,0 +1,30 @@
+####### startgru-1_endgru-25_05_29_16:02/batch_0.log Start #######
+
+Job Actor Initialized
+Async Mode: Started
+Async Mode: File Access Actor Ready
+GRU Finished: 1/25 -- GlobalGRU=15 -- LocalGRU=15 -- NumFailed=0
+GRU Finished: 2/25 -- GlobalGRU=13 -- LocalGRU=13 -- NumFailed=0
+GRU Finished: 3/25 -- GlobalGRU=14 -- LocalGRU=14 -- NumFailed=0
+GRU Finished: 4/25 -- GlobalGRU=16 -- LocalGRU=16 -- NumFailed=0
+GRU Finished: 5/25 -- GlobalGRU=18 -- LocalGRU=18 -- NumFailed=0
+GRU Finished: 6/25 -- GlobalGRU=17 -- LocalGRU=17 -- NumFailed=0
+GRU Finished: 7/25 -- GlobalGRU=8 -- LocalGRU=8 -- NumFailed=0
+GRU Finished: 8/25 -- GlobalGRU=7 -- LocalGRU=7 -- NumFailed=0
+GRU Finished: 9/25 -- GlobalGRU=9 -- LocalGRU=9 -- NumFailed=0
+GRU Finished: 10/25 -- GlobalGRU=2 -- LocalGRU=2 -- NumFailed=0
+GRU Finished: 11/25 -- GlobalGRU=1 -- LocalGRU=1 -- NumFailed=0
+GRU Finished: 12/25 -- GlobalGRU=3 -- LocalGRU=3 -- NumFailed=0
+GRU Finished: 13/25 -- GlobalGRU=6 -- LocalGRU=6 -- NumFailed=0
+GRU Finished: 14/25 -- GlobalGRU=4 -- LocalGRU=4 -- NumFailed=0
+GRU Finished: 15/25 -- GlobalGRU=5 -- LocalGRU=5 -- NumFailed=0
+GRU Finished: 16/25 -- GlobalGRU=19 -- LocalGRU=19 -- NumFailed=0
+GRU Finished: 17/25 -- GlobalGRU=20 -- LocalGRU=20 -- NumFailed=0
+GRU Finished: 18/25 -- GlobalGRU=21 -- LocalGRU=21 -- NumFailed=0
+GRU Finished: 19/25 -- GlobalGRU=11 -- LocalGRU=11 -- NumFailed=0
+GRU Finished: 20/25 -- GlobalGRU=10 -- LocalGRU=10 -- NumFailed=0
+GRU Finished: 21/25 -- GlobalGRU=12 -- LocalGRU=12 -- NumFailed=0
+GRU Finished: 22/25 -- GlobalGRU=22 -- LocalGRU=22 -- NumFailed=0
+GRU Finished: 23/25 -- GlobalGRU=24 -- LocalGRU=24 -- NumFailed=0
+GRU Finished: 24/25 -- GlobalGRU=25 -- LocalGRU=25 -- NumFailed=0
+GRU Finished: 25/25 -- GlobalGRU=23 -- LocalGRU=23 -- NumFailed=0
