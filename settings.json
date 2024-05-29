@@ -3,5 +3,5 @@
         
     "Solver": "ida",
     
-    "Executables": ["/home/kklenk/Projects/hydrology/Summa-Actors/bin/summa_actors.exe"]
+    "Executables": ["/code/Summa-Actors/bin/summa_actors.exe"]
 }
