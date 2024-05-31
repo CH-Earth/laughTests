@@ -3,5 +3,5 @@
         
     "Solver": "ida",
     
-    "Executables": ["/code/Summa-Actors/bin/summa_actors.exe"]
+    "Executables": ["/home/jovyan/Summa-Actors/bin/summa_actors.exe"]
 }
