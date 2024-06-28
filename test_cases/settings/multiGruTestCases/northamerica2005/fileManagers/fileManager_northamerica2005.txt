@@ -12,7 +12,7 @@ trialParamFile       'multiGruTestCases/northamerica2005/trialParams.nc' ! Relat
 forcingListFile      'multiGruTestCases/northamerica2005/forcingFileList_<PRECISION>' ! Relative to settingsPath 
 decisionsFile        'multiGruTestCases/northamerica2005/modelDecisions_<SOLVER>.txt' !  Relative to settingsPath 
 outputControlFile    'multiGruTestCases/northamerica2005/outputControl.txt' !  Relative to settingsPath 
-globalHruParamFile   'multiGruTestCases/northamerica2005/localParamInfo.txt' !  Relative to settingsPath 
+globalHruParamFile   'multiGruTestCases/northamerica2005/localParamInfo_<SOLVER>.txt' !  Relative to settingsPath 
 globalGruParamFile   'multiGruTestCases/northamerica2005/basinParamInfo.txt' !  Relative to settingsPatho 
 vegTableFile         'multiGruTestCases/northamerica2005/TBL_VEGPARM.TBL' ! Relative to settingsPath 
 soilTableFile        'multiGruTestCases/northamerica2005/TBL_SOILPARM.TBL' ! Relative to settingsPath 

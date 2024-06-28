@@ -1,7 +1,7 @@
 {
     "Test_List": ["all"],
         
-    "Solver": "ida",
+    "Solver": "v3",
     
-    "Executables": ["/home/jovyan/Summa-Actors/bin/summa_actors.exe"]
+    "Executables": ["/root/summa/bin/summa.exe"]
 }
