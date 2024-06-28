@@ -6,7 +6,8 @@ airtemp            | 1
 ! -------------------
 !  model variables 
 ! -------------------
-averageRoutedRunoff   | 1 
+averageRoutedRunoff   | 1
+wallClockTime         | 1
 scalarTotalET         | 1  
 scalarSWE             | 1  
 scalarRainPlusMelt    | 1  
