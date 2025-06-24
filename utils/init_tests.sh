@@ -6,7 +6,7 @@
 cd ..
 SUMMADIR=`pwd`
 export SUMMADIR
-cd laugh_tests
+cd laughTests
 BASEDIR=`pwd`
 export BASEDIR
 TEST_CASE_SETTINGS_DIR=test_cases/settings/syntheticTestCases

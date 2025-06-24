@@ -15,11 +15,11 @@ stomResist                      BallBerry       ! (06) choice of function for st
 ! ***********************************************************************************************************************
 num_method                      homegrown       ! (07) choice of numerical method
 fDerivMeth                      analytic        ! (08) method used to calculate Jacobian
-LAI_method                      monTable        ! (09) method used to determine LAI and SAI
+LAI_method                      specified       ! (09) method used to determine LAI and SAI
 f_Richards                      mixdform        ! (10) form of Richard's equation
 groundwatr                      noXplict        ! (11) choice of groundwater parameterization
 hc_profile                      constant        ! (12) choice of hydraulic conductivity profile
-bcUpprTdyn                      zeroFlux        ! (13) type of upper boundary condition for thermodynamics
+bcUpprTdyn                      nrg_flux        ! (13) type of upper boundary condition for thermodynamics
 bcLowrTdyn                      zeroFlux        ! (14) type of lower boundary condition for thermodynamics
 bcUpprSoiH                      liq_flux        ! (15) type of upper boundary condition for soil hydrology
 bcLowrSoiH                      drainage        ! (16) type of lower boundary condition for soil hydrology
@@ -28,7 +28,7 @@ canopyEmis                      difTrans        ! (18) choice of parameterizatio
 snowIncept                      lightSnow       ! (19) choice of parameterization for snow interception
 windPrfile                      logBelowCanopy  ! (20) choice of wind profile through the canopy
 astability                      louisinv        ! (21) choice of stability function
-canopySrad                      CLM_2stream     ! (22) choice of canopy shortwave radiation method
+canopySrad                      UEB_2stream     ! (22) choice of canopy shortwave radiation method
 alb_method                      varDecay        ! (23) choice of albedo representation
 compaction                      anderson        ! (24) choice of compaction routine
 snowLayers                      CLM_2010        ! (25) choice of method to combine and sub-divide snow layers
@@ -37,6 +37,7 @@ thCondSoil                      mixConstit      ! (27) choice of thermal conduct
 spatial_gw                      localColumn     ! (28) choice of method for the spatial representation of groundwater
 subRouting                      timeDlay        ! (29) choice of method for sub-grid routing
 nrgConserv                      closedForm      ! (30) choice of variable in energy equations (BE residual or IDA state variable)
+infRateMax                      GreenAmpt       ! (31) choice of infiltration rate method
 ! ***********************************************************************************************
 ! ***** description of the options available -- nothing below this point is read ****************
 ! ***********************************************************************************************
@@ -108,7 +109,7 @@ nrgConserv                      closedForm      ! (30) choice of variable in ene
 ! -----------------------------------------------------------------------------------------------
 ! (17) choice of parameterization for vegetation roughness length and displacement height
 ! Raupach_BLM1994  ! Raupach (BLM 1994) "Simplified expressions..."
-! CM_QJRMS1998     ! Choudhury and Monteith (QJRMS 1998) "A four layer model for the heat budget..."
+! CM_QJRMS1988     ! Choudhury and Monteith (QJRMS 1998) "A four layer model for the heat budget..."
 ! vegTypeTable     ! constant parameters dependent on the vegetation type
 ! -----------------------------------------------------------------------------------------------
 ! (18) choice of parameterization for canopy emissivity
@@ -170,4 +171,9 @@ nrgConserv                      closedForm      ! (30) choice of variable in ene
 ! closedForm      ! use temperature with closed form heat capacity
 ! enthalpyFormLU  ! use enthalpy with soil temperature-enthalpy lookup tables
 ! enthalpyForm    ! use enthalpy with soil temperature-enthalpy analytical solutions
+! -----------------------------------------------------------------------------------------------
+! (31) choice of infiltration rate method
+! GreenAmpt   ! Green-Ampt
+! topmodel_GA ! Green-Ampt with TOPMODEL conductivity rate
+! noInfExc    ! no infiltration excess runoff (saturation excess may still occur)
 ! ***********************************************************************************************

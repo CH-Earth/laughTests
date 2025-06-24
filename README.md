@@ -1,17 +1,17 @@
 # Laugh-Tests
-This repository serves as a testing framework for SUMMA and Summa-Actors, designed to validate the integrity of the laugh tests and facilitate the comparison of different SUMMA versions. The framework operates via a `laugh_tests.py` script, which, in conjunction with the `settings.json` configuration file, orchestrates the testing procedures.
+This repository serves as a testing framework for SUMMA and Summa-Actors, designed to validate the integrity of the laugh tests and facilitate the comparison of different SUMMA versions. The framework operates via a `laughTests.py` script, which, in conjunction with the `settings.json` configuration file, orchestrates the testing procedures.
 
 
 ## Installing the Laugh-Tests
 To install the testing framework, execute the following command:
 ```bash
-git clone https://git.cs.usask.ca/numerical_simulations_lab/hydrology/laugh_tests.git 
+git clone https://git.cs.usask.ca/numerical_simulations_lab/hydrology/laughTests.git 
 ```
 
 ## Directory Structure
-The directory structure of the laugh_tests repository is as follows:
+The directory structure of the laughTests repository is as follows:
 ```bash
-|-- laugh_tests
+|-- laughTests
    | -- post_scripts
    | -- run_scripts
    | -- test_cases
@@ -20,7 +20,7 @@ The directory structure of the laugh_tests repository is as follows:
       | -- output
    | -- utils
    | -- .gitignore
-   | -- laugh_tests.py
+   | -- laughTests.py
    | -- README.md
    | -- settings.json
    | -- test_inventory.json
@@ -49,14 +49,14 @@ Once you have installed summa you can now set up the laugh tests. The laugh test
  - Version: actors or non-actors versions of the programs, they have some differences in setting up
     - "Version": "non-actors"
 
-### Using `laugh_tests.py`
-Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laugh_tests.py` file. You run it with the following `python3 laugh_tests.py [options]`. Below are a list of options:
+### Using `laughTests.py`
+Once you have set up the `test_settings.json` file. You then have to configure your setup with the `laughTests.py` file. You run it with the following `python3 laughTests.py [options]`. Below are a list of options:
 - init
 - run
 - reset
 - clean
 
-The first command to use is `python3 laugh_tests.py init`. This will set up all of the output directories and the file managers. After running init the next command to run is `python3 laugh_tests.py run`. This will run all of the tests that you specified in the Test_List key in the `test_settings.json` file.
+The first command to use is `python3 laughTests.py init`. This will set up all of the output directories and the file managers. After running init the next command to run is `python3 laughTests.py run`. This will run all of the tests that you specified in the Test_List key in the `test_settings.json` file.
 
 If you plan to run more tests with multiple configurations use the `reset` option followed by `init` again. If you wish to delete everything including your generated output use `clean`
 
@@ -76,20 +76,20 @@ If you plan to run more tests with multiple configurations use the `reset` optio
 We have left the v4 parameters out of the `summa_zLocalParamInfo.txt` files, so that the V3 Summa will run. If you would like to change these parameters, the lines to add to the files to use these parameters at default are the following (and change as you desire). The be_steps parameter applies to all V4 choices of solver, whereas the rel* and abs* parameters only apply to choice "ida".
 
 be_steps                  |       1.0000 |       1.0000 |     512.0000
-relTolTempCas             |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolTempCas             |       1.0d-6 |       1.0d-10|       1.0d-1
-relTolTempVeg             |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolTempVeg             |       1.0d-6 |       1.0d-10|       1.0d-1
-relTolWatVeg              |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolWatVeg              |       1.0d-6 |       1.0d-10|       1.0d-1
-relTolTempSoilSnow        |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolTempSoilSnow        |       1.0d-6 |       1.0d-10|       1.0d-1
-relTolWatSnow             |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolWatSnow             |       1.0d-6 |       1.0d-10|       1.0d-1
-relTolMatric              |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolMatric              |       1.0d-6 |       1.0d-10|       1.0d-1
-relTolAquifr              |       1.0d-6 |       1.0d-10|       1.0d-1
-absTolAquifr              |       1.0d-6 |       1.0d-10|       1.0d-1
+relTolTempCas             |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolTempCas             |       1.0d-3 |       1.0d-10|       1.0d-1
+relTolTempVeg             |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolTempVeg             |       1.0d-3 |       1.0d-10|       1.0d-1
+relTolWatVeg              |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolWatVeg              |       1.0d-5 |       1.0d-10|       1.0d-1
+relTolTempSoilSnow        |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolTempSoilSnow        |       1.0d-3 |       1.0d-10|       1.0d-1
+relTolWatSnow             |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolWatSnow             |       1.0d-5 |       1.0d-10|       1.0d-1
+relTolMatric              |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolMatric              |       1.0d-5 |       1.0d-10|       1.0d-1
+relTolAquifr              |       1.0d-5 |       1.0d-10|       1.0d-1
+absTolAquifr              |       1.0d-5 |       1.0d-10|       1.0d-1
 
 
 

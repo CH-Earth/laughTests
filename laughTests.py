@@ -57,6 +57,8 @@ def setup(test_cases, precision, solver):
         print("Setting up " + test["name"])
         file_managers_path = os.path.join(test_settings_dir, "fileManagers")
         for file_manager in os.listdir(file_managers_path):
+            if file_manager.startswith('.'):
+                continue
             sub_test = re.findall("fileManager_([^._]+).txt", file_manager)
             file_manager = os.path.join(file_managers_path, file_manager)
             print("\tSetting sub-test " + sub_test[0])
