@@ -1,0 +1,20 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '2007-07-01 00:00' !
+simEndTime           '2008-09-30 00:00' !
+tmZoneInfo           'localTime' ! 
+settingsPath         '<BASEDIR>/settings/' !  setting_path
+forcingPath          '<BASEDIR>/input_data/reynolds/' !  input_path
+outputPath           '<BASEDIR>/output/reynolds_groundwatr/' !  output_path
+decisionsFile        'wrrPaperTestCases/reynolds_groundwatr/summa_zDecisions_reynoldsQTopmodel_<SOLVER>.txt' !  decision
+outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
+globalHruParamFile   'wrrPaperTestCases/reynolds_groundwatr/summa_zLocalParamInfo_reynoldsQTopmodel.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/reynolds_groundwatr/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/reynolds_groundwatr/summa_zLocalAttributes_reynoldsDistributedQTopmodel.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/reynolds_groundwatr/summa_zParamTrial_reynoldsDistributedQTopmodel.nc' !  para_trial
+forcingListFile      'wrrPaperTestCases/reynolds_groundwatr/summa_zForcingFileList_reynoldsDistributedQTopmodel_<PRECISION>' !  forcing_list
+initConditionFile    'wrrPaperTestCases/reynolds_groundwatr/summa_zInitialCond_reynoldsDistributedQTopmodel.nc' !  initial_cond
+outFilePrefix        'reynoldsDistributedQTopmodel' !  output_prefix
+vegTableFile         'meta/VEGPARM.TBL' ! 
+soilTableFile        'meta/SOILPARM.TBL' ! 
+generalTableFile     'meta/GENPARM.TBL' ! 
+noahmpTableFile      'meta/MPTABLE.TBL' ! 

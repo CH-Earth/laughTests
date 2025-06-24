@@ -1,0 +1,7 @@
+{
+    "Test_List": ["northamerica2005"],
+        
+    "Solver": "v3",
+    
+    "Executables": ["/root/summa/bin/summa.exe"]
+}

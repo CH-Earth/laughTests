@@ -1,0 +1,20 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '1996-11-28 00:00' ! 
+simEndTime           '1997-04-22 02:00' ! 
+tmZoneInfo           'localTime' ! 
+settingsPath         '<BASEDIR>/settings/' !  setting_path
+forcingPath          '<BASEDIR>/input_data/umpqua/' !  input_path
+outputPath           '<BASEDIR>/output/umpqua_snowIncept/' !  output_path
+decisionsFile        'wrrPaperTestCases/umpqua_snowIncept/summa_zDecisions_umpquaLightSnow_<SOLVER>.txt' !  decision
+outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
+globalHruParamFile   'wrrPaperTestCases/umpqua_snowIncept/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/umpqua_snowIncept/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/umpqua_snowIncept/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/umpqua_snowIncept/summa_zParamTrial_umpquaLightSnow.nc' !  para_trial
+forcingListFile      'wrrPaperTestCases/umpqua_snowIncept/summa_zForcingFileList_<PRECISION>' !  forcing_list
+initConditionFile    'wrrPaperTestCases/umpqua_snowIncept/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'umpquaLightSnow' !  output_prefix
+vegTableFile         'meta/VEGPARM.TBL' ! 
+soilTableFile        'meta/SOILPARM.TBL' ! 
+generalTableFile     'meta/GENPARM.TBL' ! 
+noahmpTableFile      'meta/MPTABLE.TBL' ! 

@@ -1,0 +1,20 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '1990-01-01 00:00' !
+simEndTime           '1990-01-01 01:00' !
+tmZoneInfo           'localTime' ! Time zone info
+settingsPath         '<BASEDIR>/settings/' !  setting_path
+forcingPath          '<BASEDIR>/input_data/vanderborght2005/' !  input_path
+outputPath           '<BASEDIR>/output/vanderborght2005/' !  output_path
+decisionsFile        'syntheticTestCases/vanderborght2005/summa_zDecisions_<SOLVER>.txt' !  decision
+outputControlFile    'syntheticTestCases/vanderborght2005/Model_Output.txt' !  ouput_file
+globalHruParamFile   'syntheticTestCases/vanderborght2005/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'syntheticTestCases/vanderborght2005/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'syntheticTestCases/vanderborght2005/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'syntheticTestCases/vanderborght2005/summa_zParamTrial_vanderborght2005_exp3.nc' !  para_trial
+forcingListFile      'syntheticTestCases/vanderborght2005/summa_zForcingFileList_<PRECISION>' !  forcing_list
+initConditionFile    'syntheticTestCases/vanderborght2005/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'vanderborght2005_exp3' !  output_prefix
+vegTableFile         'meta/VEGPARM.TBL' !
+soilTableFile        'meta/SOILPARM.TBL' !
+generalTableFile     'meta/GENPARM.TBL' !
+noahmpTableFile      'meta/MPTABLE.TBL' !

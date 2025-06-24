@@ -1,0 +1,20 @@
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  fman_ver
+simStartTime         '2010-07-01 00:00' !
+simEndTime           '2011-09-30 00:00' !
+tmZoneInfo           'localTime' !
+settingsPath         '<BASEDIR>/settings/' !  setting_path
+forcingPath          '<BASEDIR>/input_data/senator/' !  input_path
+outputPath           '<BASEDIR>/output/senator_alb_method/' !  output_path
+decisionsFile        'wrrPaperTestCases/senator_alb_method/summa_zDecisions_senatorConDecay_<SOLVER>.txt' !  decision
+outputControlFile    'meta/Model_Output.txt' !  OUTPUT_CONTROL
+globalHruParamFile   'wrrPaperTestCases/senator_alb_method/summa_zLocalParamInfo.txt' !  local_par
+globalGruParamFile   'wrrPaperTestCases/senator_alb_method/summa_zBasinParamInfo.txt' !  basin_par
+attributeFile        'wrrPaperTestCases/senator_alb_method/summa_zLocalAttributes.nc' !  local_attr
+trialParamFile       'wrrPaperTestCases/senator_alb_method/summa_zParamTrial_senatorConDecay.nc' !  para_trial
+forcingListFile      'wrrPaperTestCases/senator_alb_method/summa_zForcingFileList_<PRECISION>' !  forcing_list
+initConditionFile    'wrrPaperTestCases/senator_alb_method/summa_zInitialCond.nc' !  initial_cond
+outFilePrefix        'albedoTestCon' !  output_prefix
+vegTableFile         'meta/VEGPARM.TBL' !
+soilTableFile        'meta/SOILPARM.TBL' !
+generalTableFile     'meta/GENPARM.TBL' !
+noahmpTableFile      'meta/MPTABLE.TBL' !
