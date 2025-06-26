@@ -3,12 +3,14 @@ import sys
 import subprocess
 import json
 import re
+import shutil
 
 """
 Create all of the output directories for the test cases
 """
 def initOutputDirs(test_cases):
     outputDir = "./test_cases/output/"
+    cleanOutputDirs(test_cases)
     for test in test_cases:
         path = os.path.join(outputDir, test["name"])
         os.makedirs(path, exist_ok=True)
@@ -17,18 +19,20 @@ def initOutputDirs(test_cases):
 Clean up the output directories for the test cases
 """
 def cleanOutputDirs(test_cases):
+    print("Cleaning output directories")
     outputDir = "./test_cases/output/"
-    for dir in test_cases:
-        path = os.path.join(outputDir, dir)
+    for test in test_cases:
+        path = os.path.join(outputDir, test["name"])
         if os.path.exists(path):
-            os.rmdir(path)
+            shutil.rmtree(path)  # Recursively delete directory and contents
+            os.makedirs(path)    # Recreate the empty directory
 
 """
 Clean up the file managers for the test cases
 This cleans up the generated file managers for the test cases
 """
 def cleanFileManagers(test_cases):
-    print("Cleaning output directories")
+    print("Cleaning fileManagers")
     settings_dir = "./test_cases/settings/"
     for test in test_cases:
         path = os.path.join(settings_dir, test["type"])
@@ -109,6 +113,33 @@ def main():
             with open("test_inventory.json", "r") as inventory_file:
                 inventory = json.load(inventory_file)
                 settings['Test_List'] = inventory['tests']
+        elif 'synthetic' in settings['Test_List']:
+            with open("test_inventory.json", "r") as inventory_file:
+                inventory = json.load(inventory_file)
+                new_test_list = []
+                for test in settings['Test_List']:
+                    for inventory_test in inventory['tests']:
+                        if test == inventory_test['name'] and inventory_test['type'] == 'syntheticTestCases':
+                            new_test_list.append(inventory_test)
+                settings['Test_List'] = new_test_list
+        elif 'multiGru' in settings['Test_List']:
+            with open("test_inventory.json", "r") as inventory_file:
+                inventory = json.load(inventory_file)
+                new_test_list = []
+                for test in settings['Test_List']:
+                    for inventory_test in inventory['tests']:
+                        if test == inventory_test['name'] and inventory_test['type'] == 'multiGruTestCases':
+                            new_test_list.append(inventory_test)
+                settings['Test_List'] = new_test_list
+        elif 'wrrPaper' in settings['Test_List']:
+            with open("test_inventory.json", "r") as inventory_file:
+                inventory = json.load(inventory_file)
+                new_test_list = []
+                for test in settings['Test_List']:
+                    for inventory_test in inventory['tests']:
+                        if test == inventory_test['name'] and inventory_test['type'] == 'wrrPaperTestCases':
+                            new_test_list.append(inventory_test)
+                settings['Test_List'] = new_test_list
         else:
             with open("test_inventory.json", "r") as inventory_file:
                 inventory = json.load(inventory_file)
@@ -125,6 +156,7 @@ def main():
             initOutputDirs(settings['Test_List'])
             setup(settings['Test_List'], settings['Precision'], settings['Solver'])
         elif sys.argv[1] == "clean":
+            cleanOutputDirs(settings['Test_List'])
             cleanFileManagers(settings['Test_List'])
         elif sys.argv[1] == "run":
             runTest(settings['Test_List'], settings['Executables'])

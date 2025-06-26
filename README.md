@@ -34,7 +34,7 @@ To run the laugh tests first you must install and compile SUMMA. This can be don
 
 Once you have installed summa you can now set up the laugh tests. The laugh tests are configured through the `test_settings.json` file included in the laugh_test repository. This file will need to be modified to work in your environment and to run the specific tests you desire. The settings are configured by the user by modifying the value of the key-value pairs in the `test_settings.json` file. Detailed explanations of the key-value pairs are provided below:
 
- - Test_List: This is a the list of test you wish to run. The directories and file manager files will automatically be set up by running the `laugh_test.py` file which instructions can be found in the `laugh_test.py` section below
+ - Test_List: This is a the list of test you wish to run. The directories and file manager files will automatically be set up by running the `laugh_test.py` file which instructions can be found in the `laugh_test.py` section below. For the test list, you can choose any test in test_inventory.json by name, or "all", "multiGru", "synthetic", or "wrrPaper". Note, the multiGru tests take significantly longer than the other tests.
     - Example: "Test_List": ["celia1990", "colbeck1976", "miller1998", "mizoguchi1990", "vanderborght2005", "wigmosta1999", "reynolds_canopySrad_windPrfile_stomResist", "reynolds_groundwatr", "senator_alb_method", "umpqua_snowIncept"]
 
  - Precision: Either use "single" or "double". This specifies what precision of forcing data to use for the laugh tests.
@@ -58,7 +58,7 @@ Once you have set up the `test_settings.json` file. You then have to configure y
 
 The first command to use is `python3 laughTests.py init`. This will set up all of the output directories and the file managers. After running init the next command to run is `python3 laughTests.py run`. This will run all of the tests that you specified in the Test_List key in the `test_settings.json` file.
 
-If you plan to run more tests with multiple configurations use the `reset` option followed by `init` again. If you wish to delete everything including your generated output use `clean`
+If you plan to run more tests with multiple configurations use the `reset` option followed by `init` again. If you wish to delete everything including your generated output use `clean`.
 
 ### EXAMPLE TEST_SETTINGS.json
 ```json
@@ -66,8 +66,12 @@ If you plan to run more tests with multiple configurations use the `reset` optio
     "Test_List": ["all"],
         
     "Solver": "ida",
+
+    "Precision": "double",
     
-    "Executables": ["/home/kklenk/Projects/hydrology/Summa-Actors/bin/summa_actors.exe"]
+    "Version": "non-actors",
+    
+    "Executables": ["/Users/amedin/Research/SummaSundials/summa/bin/summa_sundials.exe"]
 }
 
 ```

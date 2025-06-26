@@ -219,28 +219,7 @@ zmaxLayer2_upper          |       0.1500 |       0.1500 |       0.1500
 zmaxLayer3_upper          |       0.3000 |       0.3000 |       0.3000
 zmaxLayer4_upper          |       0.7500 |       0.7500 |       0.7500
 ! ====================================================================
-relTolTempCas             |       1.0d-4 |       1.0d-3 |       1.0d-3  
-absTolTempCas             |       1.0d-4 |       1.0d-3 |       1.0d-3  
-relTolTempVeg             |       1.0d-4 |       1.0d-3 |       1.0d-3  
-absTolTempVeg             |       1.0d-4 |       1.0d-3 |       1.0d-3  
-relTolWatVeg              |       1.0d-4 |       1.0d-3 |       1.0d-3  
-absTolWatVeg              |       1.0d-4 |       1.0d-3 |       1.0d-3  
-relTolTempSoilSnow        |       1.0d-4 |       1.0d-3 |       1.0d-3  
-absTolTempSoilSnow        |       1.0d-4 |       1.0d-3 |       1.0d-3  
-relTolWatSnow             |       1.0d-4 |       1.0d-3 |       1.0d-3
-absTolWatSnow             |       1.0d-4 |       1.0d-3 |       1.0d-3
-relTolMatric              |       1.0d-4 |       1.0d-3 |       1.0d-3  
-absTolMatric              |       1.0d-4 |       1.0d-3 |       1.0d-3
-relTolAquifr              |       1.0d-4 |       1.0d-3 |       1.0d-3
-absTolAquifr              |       1.0d-4 |       1.0d-3 |       1.0d-3
-idaMaxOrder               |       5.0000 |       1.0000 |       5.0000
-idaMaxInternalSteps       |     500.0000 |       50.000 |    1000.0000
-idaInitStepSize           |       0.0000 |      60.0000 |    1800.0000
-idaMinStepSize            |       0.0000 |       0.0000 |       1.0000
-idaMaxStepSize            |       0.0000 |       0.0001 |    3600.0000
-idaMaxErrTestFail         |      50.0000 |       5.0000 |      50.0000
 minTempUnloading          |       270.16 |       260.16 |       273.16
 minWindUnloading          |       0.0000 |       0.0000 |       10.000
 rateTempUnloading         |      1.87d+5 |       1.0d+5 |       3.0d+5
 rateWindUnloading         |      1.56d+5 |       1.0d+5 |       3.0d+5
-! history Wed Jul 29 16:01:34 2020: /home/wknoben/summa/utils/convert_summa_config_v2_v3.py fileManager.txt

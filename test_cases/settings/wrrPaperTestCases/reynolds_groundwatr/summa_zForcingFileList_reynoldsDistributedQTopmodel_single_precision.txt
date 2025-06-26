@@ -5,4 +5,4 @@
 !  (1) The name of a forcing file
 !        --> filename must be in single quotes
 ! ****************************************************************************************************
- 'reynolds_forcing_distributed_double_precision.nc'
+ 'reynolds_forcing_distributed_single_precision.nc'

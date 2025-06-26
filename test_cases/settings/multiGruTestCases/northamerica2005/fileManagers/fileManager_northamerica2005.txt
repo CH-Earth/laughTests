@@ -1,20 +1,20 @@
-controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  file manager version 
-simStartTime         '2005-01-01 00:00' ! 
-simEndTime           '2005-12-31 23:00' ! 
-tmZoneInfo           'utcTime' ! 
-outFilePrefix        'NorthAmerica' ! 
-settingsPath         '<BASEDIR>/settings/' ! 
-forcingPath          '<BASEDIR>/input_data/northamerica2005/' ! 
-outputPath           '<BASEDIR>/output/northamerica2005/' ! 
-initConditionFile    'multiGruTestCases/northamerica2005/coldState.nc' ! Relative to settingsPath 
-attributeFile        'multiGruTestCases/northamerica2005/attributes.nc' ! Relative to settingsPath 
-trialParamFile       'multiGruTestCases/northamerica2005/trialParams.nc' ! Relative to settingsPath 
-forcingListFile      'multiGruTestCases/northamerica2005/forcingFileList_<PRECISION>' ! Relative to settingsPath 
-decisionsFile        'multiGruTestCases/northamerica2005/modelDecisions_<SOLVER>.txt' !  Relative to settingsPath 
-outputControlFile    'multiGruTestCases/northamerica2005/outputControl.txt' !  Relative to settingsPath 
-globalHruParamFile   'multiGruTestCases/northamerica2005/localParamInfo_<SOLVER>.txt' !  Relative to settingsPath 
-globalGruParamFile   'multiGruTestCases/northamerica2005/basinParamInfo.txt' !  Relative to settingsPatho 
-vegTableFile         'multiGruTestCases/northamerica2005/TBL_VEGPARM.TBL' ! Relative to settingsPath 
-soilTableFile        'multiGruTestCases/northamerica2005/TBL_SOILPARM.TBL' ! Relative to settingsPath 
-generalTableFile     'multiGruTestCases/northamerica2005/TBL_GENPARM.TBL' ! Relative to settingsPath 
-noahmpTableFile      'multiGruTestCases/northamerica2005/TBL_MPTABLE.TBL' ! Relative to settingsPath 
+controlVersion       'SUMMA_FILE_MANAGER_V3.0.0' !  file manager version
+simStartTime         '2005-01-01 00:00' !
+simEndTime           '2005-12-31 23:00' !
+tmZoneInfo           'utcTime' !
+outFilePrefix        'NorthAmerica' !
+settingsPath         '<BASEDIR>/settings/' !
+forcingPath          '<BASEDIR>/input_data/northamerica2005/' !
+outputPath           '<BASEDIR>/output/northamerica2005/' !
+initConditionFile    'multiGruTestCases/northamerica2005/coldState.nc' ! Relative to settingsPath
+attributeFile        'multiGruTestCases/northamerica2005/attributes.nc' ! Relative to settingsPath
+trialParamFile       'multiGruTestCases/northamerica2005/trialParams.nc' ! Relative to settingsPath
+forcingListFile      'multiGruTestCases/northamerica2005/forcingFileList_<PRECISION>' ! Relative to settingsPath
+decisionsFile        'multiGruTestCases/northamerica2005/modelDecisions_<SOLVER>.txt' !  Relative to settingsPath
+outputControlFile    'multiGruTestCases/northamerica2005/outputControl.txt' !  Relative to settingsPath
+globalHruParamFile   'multiGruTestCases/northamerica2005/localParamInfo.txt' !  Relative to settingsPath
+globalGruParamFile   'multiGruTestCases/northamerica2005/basinParamInfo.txt' !  Relative to settingsPatho
+vegTableFile         'multiGruTestCases/northamerica2005/TBL_VEGPARM.TBL' ! Relative to settingsPath
+soilTableFile        'multiGruTestCases/northamerica2005/TBL_SOILPARM.TBL' ! Relative to settingsPath
+generalTableFile     'multiGruTestCases/northamerica2005/TBL_GENPARM.TBL' ! Relative to settingsPath
+noahmpTableFile      'multiGruTestCases/northamerica2005/TBL_MPTABLE.TBL' ! Relative to settingsPath

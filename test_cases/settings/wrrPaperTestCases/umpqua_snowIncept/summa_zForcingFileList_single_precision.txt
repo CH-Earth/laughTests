@@ -5,4 +5,4 @@
 !  (1) The name of a forcing file
 !        --> filename must be in single quotes
 ! ****************************************************************************************************
- 'umpqua_forcing_double_precision.nc'
+ 'umpqua_forcing_single_precision.nc'
