@@ -73,7 +73,7 @@ If you plan to run more tests with multiple configurations use the `reset` optio
 ```
 
 ### Note on Parameters
-We have left the v4 parameters out of the `summa_zLocalParamInfo.txt` files, so that the V3 Summa will run. If you would like to change these parameters, the lines to add to the files to use these parameters at default are the following (and change as you desire). The be_steps parameter applies to all V4 choices of solver, whereas the rel* and abs* parameters only apply to choice "ida".
+We have left the v4 parameters out of the `summa_zLocalParamInfo.txt` files, so that the V3 Summa will run. If you would like to change these parameters, the lines to add to the files to use these parameters at default are the following (and change as you desire). The be_steps parameter applies to all V4 choices of solver, whereas the rel* and abs* parameters only apply to choice "ida". Note, these below are the recommended values for decision nrgConserv=closedForm. If nrgConserv=enthalpyForm or enthalpyFormLU, the absTolTemp* values should be 1.0e2 instead of 1.0e-3. These values are the hard-coded default (with 1.0e-3 or 1.0e2 depending on your nrgConserv choice).
 
 be_steps                  |       1.0000 |       1.0000 |     512.0000
 relTolTempCas             |       1.0d-5 |       1.0d-10|       1.0d-1
