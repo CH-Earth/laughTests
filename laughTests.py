@@ -113,41 +113,20 @@ def main():
             with open("test_inventory.json", "r") as inventory_file:
                 inventory = json.load(inventory_file)
                 settings['Test_List'] = inventory['tests']
-        elif 'synthetic' in settings['Test_List']:
-            with open("test_inventory.json", "r") as inventory_file:
-                inventory = json.load(inventory_file)
-                new_test_list = []
-                for test in settings['Test_List']:
-                    for inventory_test in inventory['tests']:
-                        if test == inventory_test['name'] and inventory_test['type'] == 'syntheticTestCases':
-                            new_test_list.append(inventory_test)
-                settings['Test_List'] = new_test_list
-        elif 'multiGru' in settings['Test_List']:
-            with open("test_inventory.json", "r") as inventory_file:
-                inventory = json.load(inventory_file)
-                new_test_list = []
-                for test in settings['Test_List']:
-                    for inventory_test in inventory['tests']:
-                        if test == inventory_test['name'] and inventory_test['type'] == 'multiGruTestCases':
-                            new_test_list.append(inventory_test)
-                settings['Test_List'] = new_test_list
-        elif 'wrrPaper' in settings['Test_List']:
-            with open("test_inventory.json", "r") as inventory_file:
-                inventory = json.load(inventory_file)
-                new_test_list = []
-                for test in settings['Test_List']:
-                    for inventory_test in inventory['tests']:
-                        if test == inventory_test['name'] and inventory_test['type'] == 'wrrPaperTestCases':
-                            new_test_list.append(inventory_test)
-                settings['Test_List'] = new_test_list
         else:
             with open("test_inventory.json", "r") as inventory_file:
                 inventory = json.load(inventory_file)
                 new_test_list = []
                 for test in settings['Test_List']:
-                    for inventory_test in inventory['tests']:
-                        if test == inventory_test['name']:
-                            new_test_list.append(inventory_test)
+                    if test not in ['syntheticTestCases', 'multiGruTestCases', 'wrrPaperTestCases']:
+                        for inventory_test in inventory['tests']:
+                            if test == inventory_test['name']:
+                                new_test_list.append(inventory_test)
+                    else:
+                        for inventory_test in inventory['tests']:
+                            if inventory_test['type'] == test:
+                                if inventory_test not in new_test_list:
+                                    new_test_list.append(inventory_test)
                 settings['Test_List'] = new_test_list
         
     if len(sys.argv) == 2:

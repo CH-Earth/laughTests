@@ -1,5 +1,5 @@
 {
-    "Test_List": ["all"],
+    "Test_List": ["syntheticTestCases","wrrPaperTestCases"],
         
     "Solver": "ida",
     
